@@ -1,0 +1,253 @@
+.header-landing {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 56px;
+}
+
+.header-landing__container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 320px;
+  height: 100%;
+  padding-left: 16px;
+  padding-right: 16px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.header-landing__logo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.header-landing__logo-icon {
+  width: 35px;
+  height: 30px;
+  fill: var(--white-color);
+  transition: fill var(--transition-duration-and-func);
+}
+
+.header-landing__right {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.header-landing__phone {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.header-landing__phone-icon {
+  width: 24px;
+  height: 24px;
+  fill: var(--white-color);
+  transition: fill var(--transition-duration-and-func);
+}
+
+.hamburger {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.hamburger-btn-icon {
+  width: 32px;
+  height: 32px;
+  fill: var(--white-color);
+}
+
+.mobile-menu {
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: flex;
+  justify-content: center;
+  width: 100vw;
+  min-height: 100vh;
+  background-color: #0d1321;
+  transform: translateX(-100%);
+  transition: transform var(--transition-duration-and-func);
+}
+
+.mobile-menu__content {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 320px;
+  min-height: 100%;
+  padding-top: 213px;
+  padding-bottom: 32px;
+}
+
+.mobile-menu__logo {
+  position: absolute;
+  top: 11px;
+  left: 16px;
+}
+
+.mobile-menu__logo-icon {
+  width: 37px;
+  height: 32px;
+  fill: #fffcf9;
+}
+
+.mobile-menu .close {
+  position: absolute;
+  top: 11px;
+  right: 16px;
+}
+
+.mobile-menu__close-btn-icon {
+  width: 32px;
+  height: 32px;
+  fill: #fffcf9;
+}
+
+.mobile-menu__list {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.mobile-menu__list-item-link {
+  display: block;
+  color: var(--white-color);
+  font-family: Montserrat;
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 1.5;
+  text-align: center;
+}
+
+.mobile-menu__controls {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+}
+
+.mobile-menu__trial-lesson-btn {
+  height: 48px;
+  border: none;
+  border-radius: 24px;
+  padding: 0;
+  background-color: #fffcf9;
+  color: #0d1321;
+  font-family: Montserrat;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1.5;
+}
+
+.messengers {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+}
+
+.messengers-list-item-link {
+  display: block;
+}
+
+.messengers-list-item-link-icon {
+  width: 56px;
+  height: 56px;
+  fill: #fffcf9;
+}
+
+@media screen and (min-width: 1160px) {
+  .header-landing {
+    height: 80px;
+  }
+
+  .header-landing__container {
+    width: 1152px;
+  }
+
+  .header-landing__logo:is(:hover, :focus) > .header-landing__logo-icon {
+    fill: #831ec1;
+  }
+
+  .header-landing__nav-wrap {
+    display: flex;
+    align-items: center;
+    gap: 217px;
+  }
+
+  .header-landing__logo-icon {
+    width: 56px;
+    height: 49px;
+    fill: var(--white-color);
+  }
+
+  .header-landing__list {
+    display: flex;
+    align-items: center;
+    gap: 32px;
+  }
+
+  .header-landing__list-item-link {
+    color: var(--white-color);
+    font-family: Montserrat;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 1.5;
+    transition: color var(--transition-duration-and-func);
+  }
+
+  .header-landing__list-item-link:is(:hover, :focus) {
+    color: #831ec1;
+  }
+
+  .hamburger {
+    display: none;
+  }
+
+  .header-landing__phone:is(:hover, :focus) > .header-landing__phone-icon {
+    fill: #831ec1;
+  }
+
+  .header-login-btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-width: 132px;
+    height: 48px;
+    background-color: var(--white-color);
+    padding-left: 12px;
+    padding-right: 12px;
+    border-radius: 24px;
+    color: #831ec1;
+    font-family: Montserrat;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 1.5;
+    transition: color var(--transition-duration-and-func), background-color var(--transition-duration-and-func);
+  }
+
+  .header-login-btn:is(:hover, :focus) {
+    background-color: #831ec1;
+    color: var(--white-color);
+  }
+
+  .mobile-menu {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 1159px) {
+  .header-landing__nav {
+    display: none;
+  }
+
+  .header-landing__login-btns {
+    display: none;
+  }
+}
