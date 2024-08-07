@@ -1,0 +1,171 @@
+.advantages-section {
+  padding-top: 64px;
+  padding-bottom: 834px;
+  background-color: #0d1321;
+}
+
+.advantages-container {
+  position: relative;
+  width: 320px;
+  padding-left: 16px;
+  padding-right: 16px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.advantages-title {
+  color: #fffcf9;
+  font-family: Montserrat;
+  font-size: 32px;
+  font-weight: 700;
+  line-height: 1.1;
+}
+
+.advantages-img-list {
+  position: absolute;
+  top: 28px;
+  left: -1px;
+  width: 356px;
+  height: 752px;
+  background-image: url('/icons/advantages/path-mobile.svg');
+  background-position: 0 0;
+  background-size: 356px 752px;
+  background-repeat: no-repeat;
+}
+
+.advantages-img-wrap {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  width: 168px;
+}
+
+.advantages-img-wrap.modern-methods {
+  top: 43px;
+  left: 121px;
+}
+
+.advantages-img-wrap.individual-approach {
+  top: 194px;
+  left: 1px;
+}
+
+.advantages-img-wrap.learning-in-skillful-groups {
+  top: 278px;
+  left: 162px;
+}
+
+.advantages-img-wrap.flexible-schedule {
+  top: 376px;
+  left: 39px;
+}
+
+.advantages-img-wrap.knowledge-monitoring {
+  top: 519px;
+  left: 128px;
+}
+
+.advantages-img-wrap.convenient-payment-system {
+  top: 680px;
+  left: 73px;
+}
+
+.advantages-img-desc {
+  color: var(--white-color);
+  font-family: Montserrat;
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 1.5;
+}
+
+.advantages-img-modern-methods {
+  width: 42px;
+  height: 63px;
+}
+
+.advantages-img-individual-approach {
+  width: 45px;
+  height: 47px;
+}
+
+.advantages-img-learning-in-skillful-groups {
+  width: 47px;
+  height: 55px;
+}
+
+.advantages-img-flexible-schedule {
+  width: 40px;
+  height: 32px;
+}
+
+.advantages-img-knowledge-monitoring {
+  width: 39px;
+  height: 77px;
+}
+
+.advantages-img-convenient-payment-system {
+  width: 41px;
+  height: 41px;
+}
+
+@media screen and (min-width: 1180px) {
+  .advantages-section {
+    padding-top: 128px;
+    padding-bottom: 779px;
+  }
+
+  .advantages-container {
+    position: relative;
+    width: 1152px;
+  }
+
+  .advantages-title {
+    color: var(--white-color);
+    font-size: 56px;
+    line-height: 1.2;
+  }
+
+  .advantages-img-list {
+    top: 40px;
+    left: 0px;
+    width: 1467px;
+    height: 612px;
+    background-image: url('/icons/advantages/path-desk.svg');
+    background-size: 1467px 612px;
+  }
+
+  .advantages-img-wrap {
+    width: 198px;
+  }
+
+  .advantages-img-wrap.modern-methods {
+    top: -60px;
+    left: 407px;
+  }
+
+  .advantages-img-wrap.individual-approach {
+    top: 0px;
+    left: 900px;
+  }
+
+  .advantages-img-wrap.learning-in-skillful-groups {
+    top: 260px;
+    left: 822px;
+  }
+
+  .advantages-img-wrap.flexible-schedule {
+    top: 252px;
+    left: 312px;
+  }
+
+  .advantages-img-wrap.knowledge-monitoring {
+    top: 458px;
+    left: 101px;
+  }
+
+  .advantages-img-wrap.convenient-payment-system {
+    top: 566px;
+    left: 627px;
+  }
+}

@@ -1,10 +1,10 @@
-.landing-hero {
+.landing-hero-wrap {
   padding-top: 142px;
   padding-bottom: 64px;
-  background-image: linear-gradient(0deg, rgba(131, 30, 193, 0), rgba(206, 36, 206, 0.8) 100%);
+  background: linear-gradient(0deg, rgba(131, 30, 193, 0), rgba(206, 36, 206, 0.8) 100%);
 }
 
-.landing-hero__container {
+.landing-hero-container {
   position: relative;
   width: 320px;
   padding-left: 16px;
@@ -13,23 +13,15 @@
   margin-right: auto;
 }
 
-.landing-hero__right {
-}
-
-.hero-img {
-}
-.hero-img-icon {
+.landing-hero-img-icon {
   position: absolute;
-  z-index: 100;
-  top: 0px;
-  left: 0px;
+  top: 207px;
+  left: calc(50% - 276 / 2);
   width: 278px;
   height: 192px;
 }
-.landing-hero__left {
-}
 
-.landing-hero__title {
+.landing-hero-title {
   color: var(--white-color);
   font-family: Montserrat;
   font-size: 32px;
@@ -38,11 +30,11 @@
   text-align: center;
 }
 
-.landing-hero__title-accent {
+.landing-hero-title-accent {
   color: #ce24ce;
 }
 
-.landing-hero__text {
+.landing-hero-text {
   margin-top: 16px;
   color: rgba(13, 19, 33, 0.8);
   font-family: Montserrat;
@@ -52,10 +44,11 @@
   text-align: center;
 }
 
-.reg-btn {
+.landing-hero-reg-btn {
   display: flex;
   justify-content: center;
   align-items: center;
+  max-width: 100%;
   height: 48px;
   border: none;
   border-radius: 24px;
@@ -66,6 +59,48 @@
   font-size: 16px;
   font-weight: 400;
   line-height: 1.5;
+  text-transform: none;
+  transition: background-color var(--transition-duration-and-func), color var(--transition-duration-and-func);
 }
-.popupBtn {
+
+@media screen and (min-width: 1180px) {
+  .landing-hero-wrap {
+    padding-top: 301px;
+    padding-bottom: 224px;
+  }
+
+  .landing-hero-container {
+    width: 1176px;
+  }
+
+  .landing-hero-img-icon {
+    top: -61px;
+    left: 678px;
+    width: 518px;
+    height: 360px;
+  }
+
+  .landing-hero-title {
+    margin-left: 12px;
+    font-size: 64px;
+    line-height: 1;
+    text-align: left;
+  }
+
+  .landing-hero-text {
+    margin-left: 12px;
+    font-size: 20px;
+    text-align: left;
+  }
+
+  .landing-hero-reg-btn {
+    width: 252px;
+    margin-top: 33px;
+    color: #fffcf9;
+  }
+
+  .landing-hero-reg-btn:is(:hover, :focus) {
+    background-color: #fffcf9;
+    color: #831ec1;
+  }
 }

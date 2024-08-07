@@ -1,0 +1,22 @@
+.landing-decorative-video {
+  height: 180px;
+}
+
+.landing-decorative-video > .video {
+  display: block;
+  width: auto;
+  height: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  object-fit: contain;
+}
+
+@media screen and (min-width: 1180px) {
+  .landing-decorative-video {
+    height: 810px;
+  }
+
+  .landing-decorative-video > .video {
+    width: 100%;
+  }
+}
