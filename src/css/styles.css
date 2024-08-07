@@ -4,6 +4,7 @@
 @import url('./utilities.css');
 @import url('./variables.css');
 /* @import url('./header.css'); */
+@import url('./hero.css');
 
 body {
   background-color: pink;
