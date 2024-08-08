@@ -1,0 +1,41 @@
+.landing-experienced-teachers-wrap {
+  padding-top: 64px;
+  padding-bottom: 64px;
+}
+
+.landing-experienced-teachers-container {
+  width: 320px;
+  padding-left: 16px;
+  padding-right: 16px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.landing-experienced-teachers-title {
+  color: #0d1321;
+  font-family: Montserrat;
+  font-size: 32px;
+  font-weight: 700;
+  line-height: 1.1;
+  text-align: center;
+}
+
+.landing-experienced-teachers-title-accent {
+  color: #ce24ce;
+}
+
+@media screen and (min-width: 1180px) {
+  .landing-experienced-teachers-wrap {
+    padding-top: 128px;
+    padding-bottom: 128px;
+  }
+
+  .landing-experienced-teachers-container {
+    width: 1152px;
+  }
+
+  .landing-experienced-teachers-title {
+    font-size: 56px;
+    line-height: 1.2;
+  }
+}

@@ -45,5 +45,8 @@
 <symbol id="clip-top" viewBox="0 0 29 32">
 <path fill="none" stroke="#ffc52f" style="stroke: var(--color1, #ffc52f)" stroke-linejoin="round" stroke-linecap="round" stroke-miterlimit="10" stroke-width="0.6809" d="M7.462 29.003l12.451-13.009c1.562-1.625 1.571-4.215 0.029-5.897-1.663-1.765-4.501-1.748-6.189-0.015l-11.748 12.391c-2.049 2.16-1.903 5.562 0.282 7.521 2.096 1.935 5.384 1.853 7.363-0.231l17.074-17.661c2.707-2.791 2.525-7.259-0.36-9.8-2.841-2.529-7.144-2.252-9.672 0.588l-12.137 13.77"></path>
 </symbol>
+<symbol id="star" viewBox="0 0 32 32">
+<path fill="#ffc52f" style="fill: var(--color1, #ffc52f)" d="M0 14.106l9.246 6.61-0.241 11.285 9.085-6.771 10.693 3.708-3.618-10.72 6.834-9.028-11.337 0.081-6.432-9.269-3.457 10.801-10.774 3.305z"></path>
+</symbol>
 </defs>
 </svg>
