@@ -62,28 +62,142 @@
   gap: 22px;
 }
 
-.landing-our-new-product-list-item {
-}
 .landing-our-new-product-list-product {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  padding: 16px;
+  border-radius: 20px;
+  background: rgba(206, 36, 206, 0.08);
 }
+
 .landing-our-new-product-list-product-title {
+  color: #000000;
+  font-family: Montserrat;
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 1.5;
 }
+
 .landing-our-new-product-list-product-text {
+  color: rgba(0, 0, 0, 0.72);
+  font-family: Montserrat;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1.5;
 }
+
 .landing-our-new-product-register-btn {
+  display: flex;
+  align-items: center;
+  gap: 8px;
 }
-.popupBtn {
-}
+
 .landing-our-new-product-register-btn-title {
+  color: rgba(206, 36, 206, 0.8);
+  font-family: Montserrat;
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 1.5;
 }
+
 .landing-our-new-product-register-btn-icon {
+  width: 24px;
+  height: 24px;
+  transition: transform var(--transition-duration-and-func);
 }
+
 .landing-our-new-product-list-product-icon {
+  position: absolute;
+  display: block;
 }
-.language {
+
+.landing-our-new-product-list-product-icon.language {
+  bottom: -6px;
+  right: 4px;
+  width: 105px;
+  height: 70px;
 }
-.history {
+
+.landing-our-new-product-list-product-icon.history {
+  bottom: -19px;
+  right: -2px;
+  width: 106px;
+  height: 87px;
 }
 
 @media screen and (min-width: 1180px) {
+  .landing-our-new-product-wrap {
+    padding-top: 128px;
+    padding-bottom: 128px;
+  }
+
+  .landing-our-new-product-container {
+    width: 1152px;
+  }
+
+  .landing-our-new-product-content-wrap {
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 0px;
+  }
+
+  .landing-our-new-product-title-wrap {
+    flex-shrink: 0;
+    gap: 36px;
+    width: 544px;
+  }
+
+  .landing-our-new-product-title {
+    font-size: 56px;
+    line-height: 1.2;
+  }
+
+  .landing-our-new-product-text-wrap {
+    width: 456px;
+    height: 118px;
+    padding-top: 36px;
+    padding-left: 83px;
+    padding-right: 55px;
+    background-image: url('/icons/our-new-product/decorative-line-desk.svg');
+  }
+
+  .landing-our-new-product-text {
+    color: #000000;
+    font-size: 16px;
+    text-align: left;
+  }
+
+  .landing-our-new-product-list {
+    gap: 16px;
+    width: 544px;
+  }
+
+  .landing-our-new-product-list-product {
+    padding: 32px;
+  }
+
+  .landing-our-new-product-list-product-title {
+    font-size: 20px;
+    line-height: 1.2;
+  }
+
+  .landing-our-new-product-register-btn:is(:hover, :focus) .landing-our-new-product-register-btn-icon {
+    transform: translateX(8px);
+  }
+
+  .landing-our-new-product-list-product-icon.language {
+    bottom: 10px;
+    right: 27px;
+    width: 133px;
+    height: 89px;
+  }
+
+  .landing-our-new-product-list-product-icon.history {
+    bottom: 7px;
+    right: 19px;
+    width: 134px;
+    height: 111px;
+  }
 }
