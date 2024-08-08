@@ -1,0 +1,78 @@
+.landing-first-lesson-wrap {
+  padding-top: 64px;
+  padding-bottom: 64px;
+  border-radius: 0px 0px 16px 16px;
+  background-image: linear-gradient(0deg, rgba(206, 36, 206, 0.8), rgba(131, 30, 193, 0) 100%);
+}
+
+.landing-first-lesson-container {
+  width: 320px;
+  padding-left: 16px;
+  padding-right: 16px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.landing-first-lesson-title {
+  color: #0d1321;
+  font-family: Montserrat;
+  font-size: 32px;
+  font-weight: 700;
+  line-height: 1.1;
+  text-align: center;
+}
+
+.landing-first-lesson-title-accent {
+  color: #831ec1;
+}
+
+.landing-first-lesson-register-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 48px;
+  margin-top: 32px;
+  border-radius: 24px;
+  background-color: #000000;
+  color: #fffcf9;
+  font-family: Montserrat;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1.5%;
+}
+
+@media screen and (min-width: 1180px) {
+  .landing-first-lesson-wrap {
+    padding-top: 185px;
+    padding-bottom: 122px;
+    border-radius: 0px 0px 20px 20px;
+    background-image: linear-gradient(0deg, rgba(206, 36, 206, 0.64), rgba(131, 30, 193, 0) 100%);
+  }
+
+  .landing-first-lesson-container {
+    width: 929px;
+  }
+
+  .landing-first-lesson-title {
+    font-size: 56px;
+    line-height: 1.2;
+  }
+
+  .landing-first-lesson-register-btn {
+    width: 208px;
+    height: 48px;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: #000000;
+    color: #fffcf9;
+    font-family: Montserrat;
+    font-size: 16px;
+    font-weight: 500;
+    transition: background-color var(--transition-duration-and-func), color var(--transition-duration-and-func);
+  }
+
+  .landing-first-lesson-register-btn:is(:hover, :focus) {
+    background-color: #fffcf9;
+    color: #000000;
+  }
+}

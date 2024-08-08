@@ -1,0 +1,149 @@
+.landing-lessons-formats-wrap {
+  padding-top: 64px;
+  padding-bottom: 64px;
+}
+
+.landing-lessons-formats-container {
+  width: 320px;
+  padding-left: 16px;
+  padding-right: 16px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.landing-lessons-formats-title {
+  color: #0d1321;
+  font-family: Montserrat;
+  font-size: 32px;
+  font-weight: 700;
+  line-height: 1.1;
+  text-align: center;
+}
+
+.landing-lessons-formats-list {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  margin-top: 32px;
+}
+
+.landing-lessons-formats-list-item {
+}
+
+.landing-lessons-formats-list-format {
+  padding: 16px;
+  padding-top: 115px;
+  border-radius: 20px;
+  background-color: rgba(206, 36, 206, 0.08);
+  background-position: top 16px left 16px;
+  background-repeat: no-repeat;
+}
+
+.landing-lessons-formats-list-format.group-lessons {
+  background-image: url('/icons/lessons-formats/group-lessons.svg');
+  background-size: 127px 78px;
+}
+
+.landing-lessons-formats-list-format.individual-lessons {
+  background-image: url('/icons/lessons-formats/individual-lessons.svg');
+  background-size: 127px 83px;
+}
+
+.landing-lessons-formats-list-format.pair-lessons {
+  background-image: url('/icons/lessons-formats/pair-lessons.svg');
+  background-size: 129px 83px;
+}
+
+.landing-lessons-formats-list-format-title {
+  color: #0d1321;
+  font-family: Montserrat;
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 1.5;
+}
+
+.landing-lessons-formats-list-format-text {
+  margin-top: 8px;
+  color: rgba(13, 19, 33, 0.72);
+  font-family: Montserrat;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1.5;
+}
+
+.landing-lessons-formats-register-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 181px;
+  height: 48px;
+  margin-top: 16px;
+  border: 1px solid;
+  border-color: rgba(206, 36, 206, 0.32);
+  background-color: transparent;
+  border-radius: 24px;
+  color: #ce24ce;
+  font-family: Montserrat;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1.5%;
+}
+
+@media screen and (min-width: 1180px) {
+  .landing-lessons-formats-wrap {
+    padding-top: 128px;
+    padding-bottom: 152px;
+  }
+
+  .landing-lessons-formats-container {
+    width: 1152px;
+  }
+
+  .landing-lessons-formats-title {
+    font-size: 56px;
+    line-height: 1.2;
+  }
+
+  .landing-lessons-formats-list {
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 32px;
+    margin-top: 55px;
+  }
+
+  .landing-lessons-formats-list-item {
+    width: calc((100% - 64px) / 3);
+  }
+
+  .landing-lessons-formats-list-format {
+    padding: 32px;
+    padding-top: 164px;
+    background-position: top 32px left 32px;
+  }
+
+  .landing-lessons-formats-list-format.group-lessons {
+    background-size: 162px 100px;
+  }
+
+  .landing-lessons-formats-list-format.individual-lessons {
+    background-size: 154px 100px;
+  }
+
+  .landing-lessons-formats-list-format.pair-lessons {
+    background-size: 156px 100px;
+  }
+
+  .landing-lessons-formats-list-format-text {
+    margin-top: 16px;
+  }
+
+  .landing-lessons-formats-register-btn {
+    transition: border-color var(--transition-duration-and-func), background-color var(--transition-duration-and-func), color var(--transition-duration-and-func);
+  }
+
+  .landing-lessons-formats-register-btn:is(:hover, :focus) {
+    border-color: transparent;
+    background-color: #ce24ce;
+    color: var(--white-color);
+  }
+}
