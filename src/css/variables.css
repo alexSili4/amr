@@ -1,4 +1,5 @@
 :root {
   --transition-duration-and-func: 300ms cubic-bezier(0.4, 0, 0.2, 1);
+  --answer-transition-duration-and-func: 400ms ease-out;
   --white-color: #ffffff;
 }
