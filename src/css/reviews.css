@@ -223,6 +223,42 @@
   .landing-reviews-slider-pagination.swiper-pagination-bullets {
     display: none;
   }
+
+  .landing-reviews-slider-controls {
+    position: absolute;
+    z-index: 10;
+    top: 172px;
+    left: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 863px;
+    pointer-events: none;
+    transform: translateX(-50%);
+  }
+
+  .landing-reviews-slider-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 48px;
+    height: 48px;
+    padding: 0;
+    border: none;
+    border-radius: 50%;
+    background-color: rgba(13, 19, 33, 0.48);
+    pointer-events: all;
+  }
+
+  .landing-reviews-slider-btn-icon {
+    width: 16px;
+    height: 18px;
+    fill: #fffcf9;
+  }
+
+  .landing-reviews-slider-btn-icon.next {
+    transform: rotate(180deg);
+  }
 }
 
 @media screen and (max-width: 1179px) {
