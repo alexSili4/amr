@@ -21,3 +21,9 @@
   src: local('Montserrat'), url('/fonts/montserrat/Montserrat-Regular.ttf') format('truetype');
   font-weight: 400;
 }
+
+@font-face {
+  font-family: 'Inter';
+  src: local('Inter'), url('/fonts/inter/Inter-Regular.ttf') format('truetype');
+  font-weight: 400;
+}

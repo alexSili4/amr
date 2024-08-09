@@ -1,0 +1,211 @@
+.landing-consultation-wrap {
+  padding-top: 64px;
+  padding-bottom: 64px;
+  background-color: #fffcf9;
+}
+
+.landing-consultation-container {
+  width: 320px;
+  padding-left: 11px;
+  padding-right: 11px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.landing-consultation-form-wrap {
+  padding: 32px 16px;
+  border-radius: 20px;
+  background-image: linear-gradient(180deg, rgba(131, 30, 193, 0.2), rgba(206, 36, 206, 0.2) 100%);
+}
+
+.landing-consultation-title {
+  color: #ce24ce;
+  font-family: Montserrat;
+  font-size: 28px;
+  font-weight: 700;
+  line-height: 1;
+  text-align: center;
+}
+
+.landing-consultation-text {
+  margin-top: 16px;
+  color: #272b33;
+  font-family: Montserrat;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1.5;
+  text-align: center;
+}
+
+.landing-consultation-form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 16px;
+}
+
+.landing-consultation-form-input-wrap {
+  width: 248px;
+}
+
+.landing-consultation-form-input-wrap:not(:first-of-type) {
+  margin-top: 8px;
+}
+
+.landing-consultation-form-input {
+  width: 100%;
+  height: 48px;
+  border: 1px solid rgba(39, 43, 51, 0.64);
+  border-radius: 24px;
+  padding-left: 24px;
+  padding-right: 24px;
+  background-color: transparent;
+  color: #0d1321;
+  font-family: Inter;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1.5;
+  outline: none;
+}
+
+.landing-consultation-form-input::placeholder {
+  color: rgba(13, 19, 33, 0.48);
+}
+
+.landing-consultation-form-radiobtn-container {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  margin-top: 16px;
+}
+
+.landing-consultation-form-radiobtn-wrap {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  cursor: pointer;
+}
+
+.landing-consultation-form-radiobtn-custom-wrap {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 24px;
+  height: 24px;
+}
+
+.landing-consultation-form-radiobtn-custom {
+  width: 17px;
+  height: 17px;
+  border-radius: 50%;
+  border: 1px solid;
+  border-color: rgba(13, 19, 33, 0.32);
+  background-color: transparent;
+  transition: background-color var(--transition-duration-and-func), border-color var(--transition-duration-and-func);
+}
+
+.landing-consultation-form-radiobtn-custom-wrap:has(input:checked) > .landing-consultation-form-radiobtn-custom {
+  border-color: transparent;
+}
+
+.landing-consultation-form-radiobtn-custom::after {
+  content: '';
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  background-image: url('/icons/consultation/radio-btn-check.svg');
+  opacity: 0;
+  transition: opacity var(--transition-duration-and-func);
+}
+
+.landing-consultation-form-radiobtn-custom-wrap:has(input:checked) > .landing-consultation-form-radiobtn-custom::after {
+  opacity: 1;
+}
+
+.landing-consultation-form-radiobtn-title {
+  color: rgba(13, 19, 33, 0.48);
+  font-family: Montserrat;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1.5;
+  transition: color var(--transition-duration-and-func);
+}
+
+.landing-consultation-form-radiobtn-custom-wrap:has(input:checked) + .landing-consultation-form-radiobtn-title {
+  color: #0d1321;
+}
+
+.landing-consultation-form-submit-btn-wrap {
+  width: 100%;
+  margin-top: 16px;
+}
+
+.landing-consultation-form-submit-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 48px;
+  padding: 0;
+  border: none;
+  border-radius: 24px;
+  background-color: #831ec1;
+  color: #fffcf9;
+  font-family: Montserrat;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 1.5;
+  transition: background-color var(--transition-duration-and-func), color var(--transition-duration-and-func);
+}
+
+.landing-consultation-form-submit-btn:disabled {
+  background-color: #c47dff;
+}
+
+@media screen and (min-width: 1180px) {
+  .landing-consultation-wrap {
+    padding-top: 128px;
+    padding-bottom: 128px;
+  }
+
+  .landing-consultation-container {
+    width: 758px;
+  }
+
+  .landing-consultation-form-wrap {
+    padding: 92px 96px;
+  }
+
+  .landing-consultation-title {
+    font-size: 48px;
+  }
+
+  .landing-consultation-form {
+    margin-top: 32px;
+  }
+
+  .landing-consultation-form-input-wrap {
+    width: 412px;
+  }
+
+  .landing-consultation-form-input {
+    border: 1px solid rgba(13, 19, 33, 0.64);
+  }
+
+  .landing-consultation-form-radiobtn-container {
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 4px;
+  }
+
+  .landing-consultation-form-submit-btn-wrap {
+    width: 181px;
+  }
+
+  .landing-consultation-form-submit-btn:not(:disabled):is(:hover, :focus) {
+    background-color: #fffcf9;
+    color: #831ec1;
+  }
+}
