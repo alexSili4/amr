@@ -5,6 +5,7 @@
 }
 
 .landing-instagram-container {
+  position: relative;
   width: 1152px;
   padding-left: 16px;
   padding-right: 16px;
@@ -25,9 +26,32 @@
 }
 
 .landing-instagram-link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 165px;
+  height: 48px;
+  border-radius: 24px;
+  margin-top: 32px;
+  background-color: #ce24ce;
+  color: var(--white-color);
+  font-family: Montserrat;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 1.5;
 }
+
 .landing-instagram-icon {
+  position: absolute;
+  top: -74px;
+  left: 775px;
+  display: block;
+  width: 556px;
+  height: 454px;
 }
 
 @media screen and (max-width: 1179px) {
+  .landing-instagram-wrap {
+    display: none;
+  }
 }
