@@ -1,0 +1,33 @@
+.landing-instagram-wrap {
+  padding-top: 128px;
+  padding-bottom: 128px;
+  background-color: #fffcf9;
+}
+
+.landing-instagram-container {
+  width: 1152px;
+  padding-left: 16px;
+  padding-right: 16px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.landing-instagram-title {
+  color: #0d1321;
+  font-family: Montserrat;
+  font-size: 56px;
+  font-weight: 700;
+  line-height: 1.2;
+}
+
+.landing-instagram-title-accent {
+  color: #ce24ce;
+}
+
+.landing-instagram-link {
+}
+.landing-instagram-icon {
+}
+
+@media screen and (max-width: 1179px) {
+}
