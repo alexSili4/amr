@@ -2,6 +2,7 @@ import refs from './refs';
 
 refs.questionsList.addEventListener('click', toggleShowAnswer);
 refs.consultationForm.addEventListener('input', onConsultationFormInput);
+refs.consultationSuccessMsgCloseBtn.addEventListener('click', onConsultationSuccessMsgCloseBtnClick);
 
 function toggleShowAnswer(e) {
   const targetClassName = 'hidden-desc';
@@ -35,4 +36,10 @@ function onConsultationFormInput(e) {
   } else {
     refs.consultationFormSubmitBtn.removeAttribute('disabled');
   }
+}
+
+function onConsultationSuccessMsgCloseBtnClick(e) {
+  e.currentTarget.blur();
+
+  refs.consultationSuccessMsg.classList.add('hidden');
 }
