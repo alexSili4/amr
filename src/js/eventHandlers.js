@@ -1,8 +1,32 @@
 import refs from './refs';
+import regExp from './regExp';
+import validateValue from './validateValue';
 
 refs.questionsList.addEventListener('click', toggleShowAnswer);
 refs.consultationForm.addEventListener('input', onConsultationFormInput);
 refs.consultationSuccessMsgCloseBtn.addEventListener('click', onConsultationSuccessMsgCloseBtnClick);
+refs.footerForm.addEventListener('input', onFooterFormInput);
+
+function onFooterFormInput(e) {
+  const data = {};
+
+  const formData = new FormData(e.currentTarget);
+
+  formData.forEach((value, key) => {
+    data[key] = value;
+  });
+
+  const dataKeys = Object.keys(data);
+  const isValidEmail = validateValue({ regExp: regExp.email, value: data[dataKeys[0]] });
+  const isCompletedForm = dataKeys.every((key) => data[key]);
+  const isActiveSubmitBtn = isCompletedForm && isValidEmail;
+
+  if (isActiveSubmitBtn) {
+    refs.footerFormSubmitBtn.removeAttribute('disabled');
+  } else {
+    refs.footerFormSubmitBtn.setAttribute('disabled', '');
+  }
+}
 
 function toggleShowAnswer(e) {
   const targetClassName = 'hidden-desc';
