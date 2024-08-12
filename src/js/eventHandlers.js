@@ -6,6 +6,52 @@ refs.questionsList.addEventListener('click', toggleShowAnswer);
 refs.consultationForm.addEventListener('input', onConsultationFormInput);
 refs.consultationSuccessMsgCloseBtn.addEventListener('click', onConsultationSuccessMsgCloseBtnClick);
 refs.footerForm.addEventListener('input', onFooterFormInput);
+refs.trialLessonBtns.forEach((btn) => {
+  btn.addEventListener('click', onTrialLessonBtnClick);
+});
+refs.trialLessonModalWinCloseBtn.addEventListener('click', onTrialLessonModalWinCloseBtnClick);
+refs.showTrialLessonsListToggleBtn.addEventListener('click', onShowTrialLessonsListToggleBtnClick);
+refs.trialLessonForm.addEventListener('input', onTrialLessonFormInput);
+
+function onTrialLessonFormInput(e) {
+  const data = {};
+
+  const formData = new FormData(e.currentTarget);
+
+  formData.forEach((value, key) => {
+    data[key] = value;
+  });
+
+  const keys = Object.keys(data);
+  const isValidLength = keys.length === 5;
+  const isCompletedForm = keys.every((key) => data[key]);
+
+  const isActiveSubmitBtn = isValidLength && isCompletedForm;
+
+  if (isActiveSubmitBtn) {
+    refs.trialLessonFormSubmitBtn.removeAttribute('disabled');
+  } else {
+    refs.trialLessonFormSubmitBtn.setAttribute('disabled', '');
+  }
+}
+
+function onShowTrialLessonsListToggleBtnClick(e) {
+  e.currentTarget.blur();
+
+  refs.trialLessonsList.classList.toggle('is-hidden');
+}
+
+function onTrialLessonModalWinCloseBtnClick(e) {
+  e.currentTarget.blur();
+
+  refs.trialLessonModalWin.classList.add('is-hidden');
+}
+
+function onTrialLessonBtnClick(e) {
+  e.currentTarget.blur();
+
+  refs.trialLessonModalWin.classList.remove('is-hidden');
+}
 
 function onFooterFormInput(e) {
   const data = {};

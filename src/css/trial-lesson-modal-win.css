@@ -1,0 +1,345 @@
+body:has(.landing-backdrop-wrap:not(.is-hidden)) {
+  overflow: hidden;
+}
+
+.landing-backdrop-wrap {
+  position: fixed;
+  z-index: 10;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow-y: scroll;
+  transition: opacity var(--transition-duration-and-func), visibility var(--transition-duration-and-func);
+}
+
+.landing-backdrop-wrap.is-hidden {
+  pointer-events: none;
+  opacity: 0;
+  visibility: hidden;
+}
+
+.landing-backdrop {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  padding: 69px;
+  background-color: rgba(13, 19, 33, 0.48);
+}
+
+.landing-modal-win {
+  position: relative;
+  height: 100%;
+  border-radius: 20px;
+  background-color: #fffcf9;
+  background-image: linear-gradient(180deg, rgba(131, 30, 193, 0.2), rgba(206, 36, 206, 0.2) 100%);
+}
+
+.landing-trial-lesson-modal-win-close-btn {
+  position: absolute;
+  top: 32px;
+  right: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+  border: none;
+  background-color: transparent;
+}
+
+.landing-trial-lesson-modal-win-close-btn-icon {
+  width: 32px;
+  height: 32px;
+  fill: rgba(13, 19, 33, 0.48);
+  transition: fill var(--transition-duration-and-func);
+}
+
+.landing-trial-lesson-modal-win-close-btn:is(:hover, :focus) > .landing-trial-lesson-modal-win-close-btn-icon {
+  fill: #000000;
+}
+
+.landing-trial-lesson-modal-win-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 736px;
+  padding-top: 92px;
+  padding-bottom: 92px;
+}
+
+.landing-trial-lesson-modal-win-title {
+  color: #0d1321;
+  font-family: Montserrat;
+  font-size: 48px;
+  font-weight: 700;
+  text-align: center;
+}
+
+.landing-trial-lesson-modal-win-title-accent {
+  color: #ce24ce;
+}
+
+.landing-trial-lesson-modal-win-text {
+  margin-top: 16px;
+  color: #0d1321;
+  font-family: Montserrat;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1.5;
+}
+
+.landing-trial-lesson-form {
+  width: 412px;
+  margin-top: 32px;
+}
+
+.landing-trial-lesson-form-list-btn-wrap {
+  position: relative;
+}
+
+.landing-trial-lesson-form-list-btn {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  height: 48px;
+  border: 1px solid rgba(13, 19, 33, 0.64);
+  border-radius: 24px;
+  background-color: transparent;
+  padding: 0;
+  padding-left: 24px;
+  padding-right: 24px;
+  opacity: 1;
+  visibility: visible;
+}
+
+.landing-trial-lesson-form-list-btn-title {
+  color: rgba(13, 19, 33, 0.48);
+  font-family: Inter;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1.5;
+}
+
+.landing-trial-lesson-form-list-btn-icon {
+  width: 10px;
+  height: 10px;
+}
+
+.landing-trial-lesson-list {
+  position: absolute;
+  z-index: 10;
+  top: calc(100% + 8px);
+  left: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  width: 100%;
+  padding: 20px 16px;
+  border-radius: 12px;
+  box-shadow: 0px 4px 24px 0px rgba(0, 0, 0, 0.12);
+  background-color: #fffcf9;
+  transition: opacity var(--transition-duration-and-func), visibility var(--transition-duration-and-func);
+}
+
+.landing-trial-lesson-list.is-hidden {
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+}
+
+.landing-trial-lesson-form-checkbox-wrap {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  cursor: pointer;
+}
+
+.landing-trial-lesson-form-checkbox-custom-wrap {
+  display: flex;
+  align-items: center;
+}
+
+.landing-trial-lesson-form-checkbox-custom {
+  position: relative;
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  border: 1.2px solid #aeaeb2;
+  background-color: transparent;
+  transition: background-color var(--transition-duration-and-func);
+}
+
+.landing-trial-lesson-form-checkbox-custom::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 16px;
+  height: 16px;
+  background-image: url('/icons/trial-lesson-modal-win/checkbox-check.svg');
+  opacity: 0;
+  transform: translateX(-50%) translateY(-50%);
+  transition: opacity var(--transition-duration-and-func);
+}
+
+.landing-trial-lesson-form-checkbox-custom-wrap:has(input:checked) > .landing-trial-lesson-form-checkbox-custom::after {
+  opacity: 1;
+}
+
+.landing-trial-lesson-form-checkbox-title {
+  color: #0d1321;
+  font-family: Montserrat;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1.5;
+}
+
+.landing-trial-lesson-form-input-wrap {
+  position: relative;
+  margin-top: 28px;
+}
+
+.landing-trial-lesson-form-input {
+  width: 100%;
+  height: 48px;
+  border: 1px solid;
+  border-color: rgba(13, 19, 33, 0.64);
+  border-radius: 24px;
+  padding-left: 24px;
+  padding-right: 24px;
+  background-color: transparent;
+  outline: none;
+  color: #000000;
+  font-family: Inter;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1.5;
+  transition: border-color var(--transition-duration-and-func);
+}
+
+.landing-trial-lesson-form-input::placeholder {
+  color: rgba(13, 19, 33, 0.48);
+}
+
+.help-block {
+  position: absolute;
+  top: calc(100% + 4px);
+  left: 0;
+  color: rgba(211, 0, 38, 0.64);
+  font-family: Montserrat;
+  font-weight: 400;
+  font-size: 10px;
+  line-height: 1.5;
+  opacity: 0;
+  transition: opacity var(--transition-duration-and-func);
+}
+
+.landing-trial-lesson-form-input-wrap.has-error > .landing-trial-lesson-form-input {
+  border-color: rgba(211, 0, 38, 0.64);
+}
+
+.landing-trial-lesson-form-input-wrap.has-error > .help-block {
+  opacity: 1;
+}
+
+.landing-trial-lesson-form-radiobtn-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 4px;
+  margin-top: 16px;
+}
+
+.landing-trial-lesson-form-radiobtn-wrap {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  cursor: pointer;
+}
+
+.landing-trial-lesson-form-radiobtn-custom-wrap {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 24px;
+  height: 24px;
+}
+
+.landing-trial-lesson-form-radiobtn-custom {
+  width: 17px;
+  height: 17px;
+  border-radius: 50%;
+  border: 1px solid;
+  border-color: rgba(13, 19, 33, 0.32);
+  background-color: transparent;
+  transition: background-color var(--transition-duration-and-func), border-color var(--transition-duration-and-func);
+}
+
+.landing-trial-lesson-form-radiobtn-custom-wrap:has(input:checked) > .landing-trial-lesson-form-radiobtn-custom {
+  border-color: transparent;
+}
+
+.landing-trial-lesson-form-radiobtn-custom::after {
+  content: '';
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  background-image: url('/icons/consultation/radio-btn-check.svg');
+  opacity: 0;
+  transition: opacity var(--transition-duration-and-func);
+}
+
+.landing-trial-lesson-form-radiobtn-custom-wrap:has(input:checked) > .landing-trial-lesson-form-radiobtn-custom::after {
+  opacity: 1;
+}
+
+.landing-trial-lesson-form-radiobtn-title {
+  color: rgba(13, 19, 33, 0.48);
+  font-family: Montserrat;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1.5;
+  transition: color var(--transition-duration-and-func);
+}
+
+.landing-trial-lesson-form-radiobtn-custom-wrap:has(input:checked) + .landing-trial-lesson-form-radiobtn-title {
+  color: #0d1321;
+}
+
+.landing-trial-lesson-form-submit-btn-wrap {
+  display: flex;
+  justify-content: center;
+  margin-top: 16px;
+}
+
+.landing-trial-lesson-form-submit-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 181px;
+  height: 48px;
+  border: none;
+  border-radius: 24px;
+  background-color: #831ec1;
+  color: #fffcf9;
+  font-family: Montserrat;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 1.5;
+  transition: color var(--transition-duration-and-func), background-color var(--transition-duration-and-func);
+}
+
+.landing-trial-lesson-form-submit-btn:disabled {
+  background-color: #c47dff;
+}
+
+.landing-trial-lesson-form-submit-btn:not(:disabled):is(:hover, :focus) {
+  background-color: #fffcf9;
+  color: #831ec1;
+}
