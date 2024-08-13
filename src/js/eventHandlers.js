@@ -2,6 +2,8 @@ import refs from './refs';
 import regExp from './regExp';
 import validateValue from './validateValue';
 
+const isHiddenClassName = 'is-hidden';
+
 refs.questionsList.addEventListener('click', toggleShowAnswer);
 refs.consultationForm.addEventListener('input', onConsultationFormInput);
 refs.consultationSuccessMsgCloseBtn.addEventListener('click', onConsultationSuccessMsgCloseBtnClick);
@@ -20,6 +22,32 @@ refs.regOnCourseModalWinCloseBtn.addEventListener('click', onRegOnCourseModalWin
 refs.showRegOnCourseListToggleBtn.addEventListener('click', onShowRegOnCourseListToggleBtnClick);
 refs.regOnCourseForm.addEventListener('input', onRegOnCourseFormInput);
 refs.regOnCourseSuccessMsgCloseBtn.addEventListener('click', onRegOnCourseSuccessMsgCloseBtnClick);
+refs.landingModalWinBackdrop.forEach((backdrop) => {
+  backdrop.addEventListener('click', onBackdropClick);
+});
+
+function onBackdropClick(e) {
+  if (e.currentTarget !== e.target) {
+    return;
+  }
+
+  e.currentTarget.parentNode.classList.add(isHiddenClassName);
+  window.removeEventListener('keydown', hideModalWin);
+}
+
+function hideModalWin(e) {
+  if (e.code === 'Escape') {
+    const targetModalWin = document.querySelector(`.js-modal-win:not(.${isHiddenClassName})`);
+
+    targetModalWin.classList.add(isHiddenClassName);
+    window.removeEventListener('keydown', hideModalWin);
+  }
+}
+
+function onCloseBtnClick(e) {
+  const targetModalWin = e.target.closest('.js-project-modal-win');
+  targetModalWin.classList.add(isHiddenClassName);
+}
 
 function onTrialLessonFormInput(e) {
   const data = {};
@@ -46,19 +74,21 @@ function onTrialLessonFormInput(e) {
 function onShowTrialLessonsListToggleBtnClick(e) {
   e.currentTarget.blur();
 
-  refs.trialLessonsList.classList.toggle('is-hidden');
+  refs.trialLessonsList.classList.toggle(isHiddenClassName);
 }
 
 function onTrialLessonModalWinCloseBtnClick(e) {
   e.currentTarget.blur();
 
-  refs.trialLessonModalWin.classList.add('is-hidden');
+  refs.trialLessonModalWin.classList.add(isHiddenClassName);
 }
 
 function onTrialLessonBtnClick(e) {
   e.currentTarget.blur();
 
-  refs.trialLessonModalWin.classList.remove('is-hidden');
+  refs.trialLessonModalWin.classList.remove(isHiddenClassName);
+
+  window.addEventListener('keydown', hideModalWin);
 }
 
 function onFooterFormInput(e) {
@@ -119,31 +149,33 @@ function onConsultationFormInput(e) {
 function onConsultationSuccessMsgCloseBtnClick(e) {
   e.currentTarget.blur();
 
-  refs.consultationSuccessMsg.classList.add('hidden');
+  refs.consultationSuccessMsg.classList.add(isHiddenClassName);
 }
 
 function onTrialLessonSuccessMsgCloseBtnClick(e) {
   e.currentTarget.blur();
 
-  refs.trialLessonSuccessMsg.classList.add('hidden');
+  refs.trialLessonSuccessMsg.classList.add(isHiddenClassName);
 }
 
 function onRegOnCourseBtnClick(e) {
   e.currentTarget.blur();
 
-  refs.regOnCourseModalWin.classList.remove('is-hidden');
+  refs.regOnCourseModalWin.classList.remove(isHiddenClassName);
+
+  window.addEventListener('keydown', hideModalWin);
 }
 
 function onRegOnCourseModalWinCloseBtnClick(e) {
   e.currentTarget.blur();
 
-  refs.regOnCourseModalWin.classList.add('is-hidden');
+  refs.regOnCourseModalWin.classList.add(isHiddenClassName);
 }
 
 function onShowRegOnCourseListToggleBtnClick(e) {
   e.currentTarget.blur();
 
-  refs.regOnCourseList.classList.toggle('is-hidden');
+  refs.regOnCourseList.classList.toggle(isHiddenClassName);
 }
 
 function onRegOnCourseFormInput(e) {
@@ -160,7 +192,7 @@ function onRegOnCourseFormInput(e) {
   const isCompletedForm = keys.every((key) => data[key]);
 
   const isActiveSubmitBtn = isValidLength && isCompletedForm;
-  console.log(data);
+
   if (isActiveSubmitBtn) {
     refs.regOnCourseFormSubmitBtn.removeAttribute('disabled');
   } else {
@@ -171,5 +203,5 @@ function onRegOnCourseFormInput(e) {
 function onRegOnCourseSuccessMsgCloseBtnClick(e) {
   e.currentTarget.blur();
 
-  refs.regOnCourseSuccessMsg.classList.add('hidden');
+  refs.regOnCourseSuccessMsg.classList.add(isHiddenClassName);
 }

@@ -24,6 +24,7 @@ const refs = {
   regOnCourseForm: document.querySelector('.js-reg-on-course-form'),
   regOnCourseSuccessMsg: document.querySelector('.js-landing-reg-on-course-success-form-submit-msg'),
   regOnCourseSuccessMsgCloseBtn: document.querySelector('.js-landing-reg-on-course-success-form-submit-msg-close-btn'),
+  landingModalWinBackdrop: document.querySelectorAll('.js-landing-backdrop'),
 };
 
 export default refs;
