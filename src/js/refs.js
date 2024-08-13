@@ -13,6 +13,17 @@ const refs = {
   trialLessonsList: document.querySelector('.js-trial-lessons-list'),
   trialLessonForm: document.querySelector('.js-trial-lesson-form'),
   trialLessonFormSubmitBtn: document.querySelector('.js-landing-trial-lesson-form-submit-btn'),
+  trialLessonSuccessMsg: document.querySelector('.js-landing-trial-lesson-success-form-submit-msg'),
+  trialLessonSuccessMsgCloseBtn: document.querySelector('.js-landing-trial-lesson-success-form-submit-msg-close-btn'),
+  regOnCourseBtns: document.querySelectorAll('.js-reg-on-course-btn'),
+  regOnCourseModalWin: document.querySelector('.js-reg-on-course-modal-win'),
+  regOnCourseModalWinCloseBtn: document.querySelector('.js-reg-on-course-modal-win-close-btn'),
+  showRegOnCourseListToggleBtn: document.querySelector('.js-show-reg-on-course-list-toggle-btn'),
+  regOnCourseList: document.querySelector('.js-reg-on-course-list'),
+  regOnCourseFormSubmitBtn: document.querySelector('.js-landing-reg-on-course-form-submit-btn'),
+  regOnCourseForm: document.querySelector('.js-reg-on-course-form'),
+  regOnCourseSuccessMsg: document.querySelector('.js-landing-reg-on-course-success-form-submit-msg'),
+  regOnCourseSuccessMsgCloseBtn: document.querySelector('.js-landing-reg-on-course-success-form-submit-msg-close-btn'),
 };
 
 export default refs;

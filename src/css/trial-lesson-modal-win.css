@@ -343,3 +343,88 @@ body:has(.landing-backdrop-wrap:not(.is-hidden)) {
   background-color: #fffcf9;
   color: #831ec1;
 }
+
+.landing-trial-lesson-success-form-submit-msg {
+  position: absolute;
+  z-index: 10;
+  top: 0;
+  left: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  border-radius: 20px;
+  background-color: #fffcf9;
+  background-image: linear-gradient(180deg, rgba(131, 30, 193, 0.2), rgba(206, 36, 206, 0.2) 100%);
+  opacity: 1;
+  transition: opacity var(--transition-duration-and-func);
+}
+
+.landing-trial-lesson-success-form-submit-msg.hidden {
+  opacity: 0;
+  pointer-events: none;
+}
+
+.landing-trial-lesson-success-form-submit-msg-icon-star {
+  position: absolute;
+  display: block;
+  width: 87px;
+  height: 87px;
+}
+
+.landing-trial-lesson-success-form-submit-msg-icon-star.top {
+  top: 34px;
+  left: -39px;
+}
+
+.landing-trial-lesson-success-form-submit-msg-icon-star.bottom {
+  bottom: 34px;
+  right: -45px;
+}
+
+.landing-trial-lesson-success-form-submit-msg-close-btn {
+  position: absolute;
+  top: 32px;
+  right: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+  border: none;
+  background-color: transparent;
+}
+
+.landing-trial-lesson-success-form-submit-msg-close-btn-icon {
+  width: 32px;
+  height: 32px;
+  fill: rgba(13, 19, 33, 0.48);
+  transition: fill var(--transition-duration-and-func);
+}
+
+.landing-trial-lesson-success-form-submit-msg-close-btn:is(:hover, :focus) > .landing-trial-lesson-success-form-submit-msg-close-btn-icon {
+  fill: #000000;
+}
+
+.landing-trial-lesson-success-form-submit-msg-text-wrap {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+}
+
+.landing-trial-lesson-success-form-submit-msg-title {
+  color: #ce24ce;
+  font-family: Montserrat;
+  font-size: 48px;
+  font-weight: 700;
+  line-height: 1.1;
+}
+
+.landing-trial-lesson-success-form-submit-msg-desc {
+  color: #0d1321;
+  font-family: Montserrat;
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 1.5;
+}

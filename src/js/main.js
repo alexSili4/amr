@@ -1,2 +1,2 @@
-// import '/js/swiper';
+import '/js/swiper';
 import '/js/eventHandlers';
