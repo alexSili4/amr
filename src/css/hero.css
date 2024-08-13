@@ -1,7 +1,8 @@
 .landing-hero-wrap {
   padding-top: 142px;
   padding-bottom: 64px;
-  background: linear-gradient(0deg, rgba(131, 30, 193, 0), rgba(206, 36, 206, 0.8) 100%);
+  background-image: linear-gradient(0deg, rgba(131, 30, 193, 0), rgba(206, 36, 206, 0.8) 100%);
+  background-color: #fffcf9;
 }
 
 .landing-hero-container {
@@ -63,6 +64,10 @@
   transition: background-color var(--transition-duration-and-func), color var(--transition-duration-and-func);
 }
 
+.decorative-border {
+  overflow: hidden;
+}
+
 @media screen and (min-width: 1180px) {
   .landing-hero-wrap {
     padding-top: 301px;
@@ -83,7 +88,6 @@
   .landing-hero-title {
     margin-left: 12px;
     font-size: 64px;
-    line-height: 1;
     text-align: left;
   }
 

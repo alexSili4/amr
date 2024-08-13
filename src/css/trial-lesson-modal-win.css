@@ -428,3 +428,9 @@ body:has(.landing-backdrop-wrap:not(.is-hidden)) {
   font-weight: 400;
   line-height: 1.5;
 }
+
+@media screen and (min-height: 800px) {
+  .landing-backdrop-wrap {
+    overflow-y: hidden;
+  }
+}

@@ -1,7 +1,9 @@
 .landing-slogan-section {
+  position: relative;
   padding-top: 64px;
   padding-bottom: 300px;
   background-color: rgb(255, 252, 249);
+  overflow: hidden;
 }
 
 .landing-slogan-container {
@@ -47,8 +49,8 @@
 
 .landing-slogan-decorative-hand {
   position: absolute;
-  top: 305px;
-  left: 42px;
+  top: 369px;
+  right: -100px;
   display: block;
   width: 378px;
   height: 194px;
@@ -83,8 +85,8 @@
   }
 
   .landing-slogan-decorative-hand {
-    top: -32px;
-    left: 731px;
+    top: 96px;
+    right: -220px;
     width: 786px;
     height: 403px;
   }

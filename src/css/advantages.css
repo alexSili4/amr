@@ -2,6 +2,7 @@
   padding-top: 64px;
   padding-bottom: 834px;
   background-color: #0d1321;
+  overflow: hidden;
 }
 
 .advantages-container {
@@ -167,5 +168,39 @@
   .advantages-img-wrap.convenient-payment-system {
     top: 566px;
     left: 627px;
+  }
+
+  .advantages-img-desc {
+    font-size: 20px;
+  }
+
+  .advantages-img-modern-methods {
+    width: 71px;
+    height: 106px;
+  }
+
+  .advantages-img-individual-approach {
+    width: 72px;
+    height: 76px;
+  }
+
+  .advantages-img-learning-in-skillful-groups {
+    width: 78px;
+    height: 91px;
+  }
+
+  .advantages-img-flexible-schedule {
+    width: 61px;
+    height: 49px;
+  }
+
+  .advantages-img-knowledge-monitoring {
+    width: 66px;
+    height: 130px;
+  }
+
+  .advantages-img-convenient-payment-system {
+    width: 64px;
+    height: 64px;
   }
 }
