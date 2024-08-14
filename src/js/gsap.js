@@ -24,7 +24,7 @@ mm.add('(min-width: 1180px)', () => {
     animation: tlContainer,
     trigger: '.js-advantages-section',
     start: 'center center',
-    end: 'bottom',
+    end: 'bottom+=1300',
     pin: true,
     toggleActions: 'play none none reverse',
   });
@@ -32,7 +32,7 @@ mm.add('(min-width: 1180px)', () => {
   ScrollTrigger.create({
     animation: modernMethodsTl,
     trigger: '.js-advantages-img-wrap.modern-methods',
-    start: 'center',
+    start: 'center+=300',
     end: 'bottom',
     toggleActions: 'play none none reverse',
   });
@@ -40,7 +40,7 @@ mm.add('(min-width: 1180px)', () => {
   ScrollTrigger.create({
     animation: individualApproachTl,
     trigger: '.js-advantages-img-wrap.individual-approach',
-    start: 'bottom',
+    start: 'center+=500',
     end: 'bottom',
     toggleActions: 'play none none reverse',
   });
@@ -48,7 +48,7 @@ mm.add('(min-width: 1180px)', () => {
   ScrollTrigger.create({
     animation: learningInSkillfulGroupsTl,
     trigger: '.js-advantages-img-wrap.learning-in-skillful-groups',
-    start: 'top',
+    start: 'center+=600',
     end: 'bottom',
     toggleActions: 'play none none reverse',
   });
@@ -56,7 +56,7 @@ mm.add('(min-width: 1180px)', () => {
   ScrollTrigger.create({
     animation: flexibleScheduleTl,
     trigger: '.js-advantages-img-wrap.flexible-schedule',
-    start: 'bottom',
+    start: 'bottom+=800',
     end: 'bottom',
     toggleActions: 'play none none reverse',
   });
@@ -64,7 +64,7 @@ mm.add('(min-width: 1180px)', () => {
   ScrollTrigger.create({
     animation: knowledgeMonitoringTl,
     trigger: '.js-advantages-img-wrap.knowledge-monitoring',
-    start: 'top',
+    start: 'top+=1000',
     end: 'bottom',
     toggleActions: 'play none none reverse',
   });
@@ -72,7 +72,7 @@ mm.add('(min-width: 1180px)', () => {
   ScrollTrigger.create({
     animation: convenientPaymentSystemTl,
     trigger: '.js-advantages-img-wrap.convenient-payment-system',
-    start: 'top',
+    start: 'top+=1200',
     end: 'bottom',
     toggleActions: 'play none none reverse',
   });
