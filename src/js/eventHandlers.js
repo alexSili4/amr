@@ -6,7 +6,6 @@ const isHiddenClassName = 'is-hidden';
 
 refs.questionsList.addEventListener('click', toggleShowAnswer);
 refs.consultationForm.addEventListener('input', onConsultationFormInput);
-refs.consultationSuccessMsgCloseBtn.addEventListener('click', onConsultationSuccessMsgCloseBtnClick);
 refs.footerForm.addEventListener('input', onFooterFormInput);
 refs.trialLessonBtns.forEach((btn) => {
   btn.addEventListener('click', onTrialLessonBtnClick);
@@ -14,17 +13,22 @@ refs.trialLessonBtns.forEach((btn) => {
 refs.trialLessonModalWinCloseBtn.addEventListener('click', onTrialLessonModalWinCloseBtnClick);
 refs.showTrialLessonsListToggleBtn.addEventListener('click', onShowTrialLessonsListToggleBtnClick);
 refs.trialLessonForm.addEventListener('input', onTrialLessonFormInput);
-refs.trialLessonSuccessMsgCloseBtn.addEventListener('click', onTrialLessonSuccessMsgCloseBtnClick);
 refs.regOnCourseBtns.forEach((btn) => {
   btn.addEventListener('click', onRegOnCourseBtnClick);
 });
 refs.regOnCourseModalWinCloseBtn.addEventListener('click', onRegOnCourseModalWinCloseBtnClick);
 refs.showRegOnCourseListToggleBtn.addEventListener('click', onShowRegOnCourseListToggleBtnClick);
 refs.regOnCourseForm.addEventListener('input', onRegOnCourseFormInput);
-refs.regOnCourseSuccessMsgCloseBtn.addEventListener('click', onRegOnCourseSuccessMsgCloseBtnClick);
 refs.landingModalWinBackdrop.forEach((backdrop) => {
   backdrop.addEventListener('click', onBackdropClick);
 });
+refs.successMsgCloseBtn.addEventListener('click', onSuccessMsgCloseBtnClick);
+
+function onSuccessMsgCloseBtnClick(e) {
+  e.currentTarget.blur(isHiddenClassName);
+
+  refs.successMsg.classList.add(isHiddenClassName);
+}
 
 function onBackdropClick(e) {
   if (e.currentTarget !== e.target) {
@@ -146,18 +150,6 @@ function onConsultationFormInput(e) {
   }
 }
 
-function onConsultationSuccessMsgCloseBtnClick(e) {
-  e.currentTarget.blur();
-
-  refs.consultationSuccessMsg.classList.add(isHiddenClassName);
-}
-
-function onTrialLessonSuccessMsgCloseBtnClick(e) {
-  e.currentTarget.blur();
-
-  refs.trialLessonSuccessMsg.classList.add(isHiddenClassName);
-}
-
 function onRegOnCourseBtnClick(e) {
   e.currentTarget.blur();
 
@@ -198,10 +190,4 @@ function onRegOnCourseFormInput(e) {
   } else {
     refs.regOnCourseFormSubmitBtn.setAttribute('disabled', '');
   }
-}
-
-function onRegOnCourseSuccessMsgCloseBtnClick(e) {
-  e.currentTarget.blur();
-
-  refs.regOnCourseSuccessMsg.classList.add(isHiddenClassName);
 }
