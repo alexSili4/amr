@@ -24,7 +24,7 @@ mm.add('(min-width: 1180px)', () => {
     animation: tlContainer,
     trigger: '.js-advantages-section',
     start: 'center center',
-    end: 'bottom+=1300',
+    end: 'bottom+=1200',
     pin: true,
     toggleActions: 'play none none reverse',
   });
@@ -32,7 +32,7 @@ mm.add('(min-width: 1180px)', () => {
   ScrollTrigger.create({
     animation: modernMethodsTl,
     trigger: '.js-advantages-img-wrap.modern-methods',
-    start: 'center+=300',
+    start: 'center+=200',
     end: 'bottom',
     toggleActions: 'play none none reverse',
   });
@@ -48,7 +48,7 @@ mm.add('(min-width: 1180px)', () => {
   ScrollTrigger.create({
     animation: learningInSkillfulGroupsTl,
     trigger: '.js-advantages-img-wrap.learning-in-skillful-groups',
-    start: 'center+=600',
+    start: 'center+=500',
     end: 'bottom',
     toggleActions: 'play none none reverse',
   });
