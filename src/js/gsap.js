@@ -98,7 +98,7 @@ mm.add('(max-width: 1179px)', () => {
     animation: tlContainer,
     trigger: '.js-advantages-section',
     start: 'center center',
-    end: 'bottom',
+    end: 'bottom+=1400',
     pin: true,
     toggleActions: 'play none none reverse',
   });
@@ -106,7 +106,7 @@ mm.add('(max-width: 1179px)', () => {
   ScrollTrigger.create({
     animation: modernMethodsTl,
     trigger: '.js-advantages-img-wrap.modern-methods',
-    start: 'center',
+    start: 'center+=200',
     end: 'bottom',
     toggleActions: 'play none none reverse',
   });
@@ -114,7 +114,7 @@ mm.add('(max-width: 1179px)', () => {
   ScrollTrigger.create({
     animation: individualApproachTl,
     trigger: '.js-advantages-img-wrap.individual-approach',
-    start: 'center',
+    start: 'center+=400',
     end: 'bottom',
     toggleActions: 'play none none reverse',
   });
@@ -122,7 +122,7 @@ mm.add('(max-width: 1179px)', () => {
   ScrollTrigger.create({
     animation: learningInSkillfulGroupsTl,
     trigger: '.js-advantages-img-wrap.learning-in-skillful-groups',
-    start: 'center',
+    start: 'center+=600',
     end: 'bottom',
     toggleActions: 'play none none reverse',
   });
@@ -130,7 +130,7 @@ mm.add('(max-width: 1179px)', () => {
   ScrollTrigger.create({
     animation: flexibleScheduleTl,
     trigger: '.js-advantages-img-wrap.flexible-schedule',
-    start: 'bottom',
+    start: 'bottom+=800',
     end: 'bottom',
     toggleActions: 'play none none reverse',
   });
@@ -138,7 +138,7 @@ mm.add('(max-width: 1179px)', () => {
   ScrollTrigger.create({
     animation: knowledgeMonitoringTl,
     trigger: '.js-advantages-img-wrap.knowledge-monitoring',
-    start: 'top',
+    start: 'top+=1000',
     end: 'bottom',
     toggleActions: 'play none none reverse',
   });
@@ -146,7 +146,7 @@ mm.add('(max-width: 1179px)', () => {
   ScrollTrigger.create({
     animation: convenientPaymentSystemTl,
     trigger: '.js-advantages-img-wrap.convenient-payment-system',
-    start: 'top',
+    start: 'top+=1200',
     end: 'bottom',
     toggleActions: 'play none none reverse',
   });
