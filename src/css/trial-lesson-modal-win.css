@@ -120,6 +120,17 @@ body:has(.landing-backdrop-wrap:not(.is-hidden)) {
   font-size: 16px;
   font-weight: 400;
   line-height: 1.5;
+  text-align: left;
+  transition: color var(--transition-duration-and-func);
+}
+
+.landing-trial-lesson-form-list-btn-title.active {
+  color: #000000;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 1;
+  -webkit-box-orient: vertical;
 }
 
 .landing-trial-lesson-form-list-btn-icon {

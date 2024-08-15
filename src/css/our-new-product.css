@@ -37,14 +37,26 @@
 }
 
 .landing-our-new-product-text-wrap {
+  position: relative;
   height: 68px;
   padding-top: 15px;
   padding-left: 17px;
   padding-right: 19px;
-  background-image: url('/icons/our-new-product/decorative-line-mobile.svg');
-  background-position: 0 0;
-  background-size: 100% 100%;
-  background-repeat: no-repeat;
+}
+
+.landing-our-new-product-text-wrap-icon {
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+.landing-our-new-product-text-wrap-icon path {
+  stroke-dasharray: 1500;
+  stroke-dashoffset: 1500;
+  animation: draw 3s forwards;
 }
 
 .landing-our-new-product-text {
@@ -160,7 +172,10 @@
     padding-top: 36px;
     padding-left: 83px;
     padding-right: 55px;
-    background-image: url('/icons/our-new-product/decorative-line-desk.svg');
+  }
+
+  .landing-our-new-product-text-wrap-icon.mobile {
+    display: none;
   }
 
   .landing-our-new-product-text {
@@ -199,5 +214,11 @@
     right: 19px;
     width: 134px;
     height: 111px;
+  }
+}
+
+@media screen and (max-width: 1179px) {
+  .landing-our-new-product-text-wrap-icon.desc {
+    display: none;
   }
 }

@@ -9,18 +9,15 @@ const refs = {
   trialLessonModalWinCloseBtn: document.querySelector('.js-trial-lesson-modal-win-close-btn'),
   showTrialLessonsListToggleBtn: document.querySelector('.js-show-trial-lessons-list-toggle-btn'),
   trialLessonsList: document.querySelector('.js-trial-lessons-list'),
-  trialLessonForm: document.querySelector('.js-trial-lesson-form'),
-  trialLessonFormSubmitBtn: document.querySelector('.js-landing-trial-lesson-form-submit-btn'),
   regOnCourseBtns: document.querySelectorAll('.js-reg-on-course-btn'),
   regOnCourseModalWin: document.querySelector('.js-reg-on-course-modal-win'),
   regOnCourseModalWinCloseBtn: document.querySelector('.js-reg-on-course-modal-win-close-btn'),
   showRegOnCourseListToggleBtn: document.querySelector('.js-show-reg-on-course-list-toggle-btn'),
   regOnCourseList: document.querySelector('.js-reg-on-course-list'),
-  regOnCourseFormSubmitBtn: document.querySelector('.js-landing-reg-on-course-form-submit-btn'),
-  regOnCourseForm: document.querySelector('.js-reg-on-course-form'),
   landingModalWinBackdrop: document.querySelectorAll('.js-landing-backdrop'),
   successMsgCloseBtn: document.querySelector('.js-landing-success-form-submit-msg-modal-win'),
   successMsg: document.querySelector('.js-landing-success-form-submit-msg-modal-win'),
+  showTrialLessonsListToggleBtnTitle: document.querySelector('.js-landing-trial-lesson-form-list-btn-title'),
 };
 
 export default refs;

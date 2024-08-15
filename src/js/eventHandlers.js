@@ -4,25 +4,38 @@ import validateValue from './validateValue';
 
 const isHiddenClassName = 'is-hidden';
 
-refs.questionsList.addEventListener('click', toggleShowAnswer);
-refs.consultationForm.addEventListener('input', onConsultationFormInput);
-refs.footerForm.addEventListener('input', onFooterFormInput);
+// refs.questionsList.addEventListener('click', toggleShowAnswer);
+// refs.consultationForm.addEventListener('input', onConsultationFormInput);
+// refs.footerForm.addEventListener('input', onFooterFormInput);
 refs.trialLessonBtns.forEach((btn) => {
   btn.addEventListener('click', onTrialLessonBtnClick);
 });
 refs.trialLessonModalWinCloseBtn.addEventListener('click', onTrialLessonModalWinCloseBtnClick);
 refs.showTrialLessonsListToggleBtn.addEventListener('click', onShowTrialLessonsListToggleBtnClick);
-refs.trialLessonForm.addEventListener('input', onTrialLessonFormInput);
 refs.regOnCourseBtns.forEach((btn) => {
   btn.addEventListener('click', onRegOnCourseBtnClick);
 });
-refs.regOnCourseModalWinCloseBtn.addEventListener('click', onRegOnCourseModalWinCloseBtnClick);
-refs.showRegOnCourseListToggleBtn.addEventListener('click', onShowRegOnCourseListToggleBtnClick);
-refs.regOnCourseForm.addEventListener('input', onRegOnCourseFormInput);
+// refs.regOnCourseModalWinCloseBtn.addEventListener('click', onRegOnCourseModalWinCloseBtnClick);
+// refs.showRegOnCourseListToggleBtn.addEventListener('click', onShowRegOnCourseListToggleBtnClick);
 refs.landingModalWinBackdrop.forEach((backdrop) => {
   backdrop.addEventListener('click', onBackdropClick);
 });
-refs.successMsgCloseBtn.addEventListener('click', onSuccessMsgCloseBtnClick);
+// refs.successMsgCloseBtn.addEventListener('click', onSuccessMsgCloseBtnClick);
+refs.trialLessonsList.addEventListener('input', onRegOnCourseListInput);
+
+function onRegOnCourseListInput(e) {
+  const activeBtnClassName = 'active';
+  const activeCourses = refs.trialLessonsList.querySelectorAll('label:has(input[type="checkbox"]:checked)');
+  const btnTitle = [...activeCourses].map((item) => item.lastElementChild.textContent).join(', ');
+
+  if (btnTitle) {
+    refs.showTrialLessonsListToggleBtnTitle.textContent = btnTitle;
+    refs.showTrialLessonsListToggleBtnTitle.classList.add(activeBtnClassName);
+  } else {
+    refs.showTrialLessonsListToggleBtnTitle.textContent = 'Обрати предмет';
+    refs.showTrialLessonsListToggleBtnTitle.classList.remove(activeBtnClassName);
+  }
+}
 
 function onSuccessMsgCloseBtnClick(e) {
   e.currentTarget.blur(isHiddenClassName);
@@ -45,33 +58,6 @@ function hideModalWin(e) {
 
     targetModalWin.classList.add(isHiddenClassName);
     window.removeEventListener('keydown', hideModalWin);
-  }
-}
-
-function onCloseBtnClick(e) {
-  const targetModalWin = e.target.closest('.js-project-modal-win');
-  targetModalWin.classList.add(isHiddenClassName);
-}
-
-function onTrialLessonFormInput(e) {
-  const data = {};
-
-  const formData = new FormData(e.currentTarget);
-
-  formData.forEach((value, key) => {
-    data[key] = value;
-  });
-
-  const keys = Object.keys(data);
-  const isValidLength = keys.length === 5;
-  const isCompletedForm = keys.every((key) => data[key]);
-
-  const isActiveSubmitBtn = isValidLength && isCompletedForm;
-
-  if (isActiveSubmitBtn) {
-    refs.trialLessonFormSubmitBtn.removeAttribute('disabled');
-  } else {
-    refs.trialLessonFormSubmitBtn.setAttribute('disabled', '');
   }
 }
 
@@ -168,26 +154,4 @@ function onShowRegOnCourseListToggleBtnClick(e) {
   e.currentTarget.blur();
 
   refs.regOnCourseList.classList.toggle(isHiddenClassName);
-}
-
-function onRegOnCourseFormInput(e) {
-  const data = {};
-
-  const formData = new FormData(e.currentTarget);
-
-  formData.forEach((value, key) => {
-    data[key] = value;
-  });
-
-  const keys = Object.keys(data);
-  const isValidLength = keys.length === 5;
-  const isCompletedForm = keys.every((key) => data[key]);
-
-  const isActiveSubmitBtn = isValidLength && isCompletedForm;
-
-  if (isActiveSubmitBtn) {
-    refs.regOnCourseFormSubmitBtn.removeAttribute('disabled');
-  } else {
-    refs.regOnCourseFormSubmitBtn.setAttribute('disabled', '');
-  }
 }
