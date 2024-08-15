@@ -1,12 +1,9 @@
 import refs from './refs';
-import regExp from './regExp';
-import validateValue from './validateValue';
 
 const isHiddenClassName = 'is-hidden';
 
-// refs.questionsList.addEventListener('click', toggleShowAnswer);
-// refs.consultationForm.addEventListener('input', onConsultationFormInput);
-// refs.footerForm.addEventListener('input', onFooterFormInput);
+refs.questionsList.addEventListener('click', toggleShowAnswer);
+refs.consultationForm.addEventListener('input', onConsultationFormInput);
 refs.trialLessonBtns.forEach((btn) => {
   btn.addEventListener('click', onTrialLessonBtnClick);
 });
@@ -15,15 +12,15 @@ refs.showTrialLessonsListToggleBtn.addEventListener('click', onShowTrialLessonsL
 refs.regOnCourseBtns.forEach((btn) => {
   btn.addEventListener('click', onRegOnCourseBtnClick);
 });
-// refs.regOnCourseModalWinCloseBtn.addEventListener('click', onRegOnCourseModalWinCloseBtnClick);
-// refs.showRegOnCourseListToggleBtn.addEventListener('click', onShowRegOnCourseListToggleBtnClick);
+refs.regOnCourseModalWinCloseBtn.addEventListener('click', onRegOnCourseModalWinCloseBtnClick);
+refs.showRegOnCourseListToggleBtn.addEventListener('click', onShowRegOnCourseListToggleBtnClick);
 refs.landingModalWinBackdrop.forEach((backdrop) => {
   backdrop.addEventListener('click', onBackdropClick);
 });
-// refs.successMsgCloseBtn.addEventListener('click', onSuccessMsgCloseBtnClick);
-refs.trialLessonsList.addEventListener('input', onRegOnCourseListInput);
+refs.successMsgCloseBtn.addEventListener('click', onSuccessMsgCloseBtnClick);
+refs.trialLessonsList.addEventListener('input', onTrialLessonsListInput);
 
-function onRegOnCourseListInput(e) {
+function onTrialLessonsListInput(e) {
   const activeBtnClassName = 'active';
   const activeCourses = refs.trialLessonsList.querySelectorAll('label:has(input[type="checkbox"]:checked)');
   const btnTitle = [...activeCourses].map((item) => item.lastElementChild.textContent).join(', ');
@@ -79,27 +76,6 @@ function onTrialLessonBtnClick(e) {
   refs.trialLessonModalWin.classList.remove(isHiddenClassName);
 
   window.addEventListener('keydown', hideModalWin);
-}
-
-function onFooterFormInput(e) {
-  const data = {};
-
-  const formData = new FormData(e.currentTarget);
-
-  formData.forEach((value, key) => {
-    data[key] = value;
-  });
-
-  const dataKeys = Object.keys(data);
-  const isValidEmail = validateValue({ regExp: regExp.email, value: data[dataKeys[0]] });
-  const isCompletedForm = dataKeys.every((key) => data[key]);
-  const isActiveSubmitBtn = isCompletedForm && isValidEmail;
-
-  if (isActiveSubmitBtn) {
-    refs.footerFormSubmitBtn.removeAttribute('disabled');
-  } else {
-    refs.footerFormSubmitBtn.setAttribute('disabled', '');
-  }
 }
 
 function toggleShowAnswer(e) {
