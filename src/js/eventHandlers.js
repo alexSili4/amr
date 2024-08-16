@@ -3,7 +3,6 @@ import refs from './refs';
 const isHiddenClassName = 'is-hidden';
 
 refs.questionsList.addEventListener('click', toggleShowAnswer);
-refs.consultationForm.addEventListener('input', onConsultationFormInput);
 refs.trialLessonBtns.forEach((btn) => {
   btn.addEventListener('click', onTrialLessonBtnClick);
 });
@@ -19,6 +18,21 @@ refs.landingModalWinBackdrop.forEach((backdrop) => {
 });
 refs.successMsgCloseBtn.addEventListener('click', onSuccessMsgCloseBtnClick);
 refs.trialLessonsList.addEventListener('input', onTrialLessonsListInput);
+refs.regOnCourseList.addEventListener('input', onRegOnCourseListInput);
+
+function onRegOnCourseListInput(e) {
+  const activeBtnClassName = 'active';
+  const activeCourses = refs.regOnCourseList.querySelectorAll('label:has(input[type="checkbox"]:checked)');
+  const btnTitle = [...activeCourses].map((item) => item.lastElementChild.textContent).join(', ');
+
+  if (btnTitle) {
+    refs.showRegOnCourseListToggleBtnTitle.textContent = btnTitle;
+    refs.showRegOnCourseListToggleBtnTitle.classList.add(activeBtnClassName);
+  } else {
+    refs.showRegOnCourseListToggleBtnTitle.textContent = 'Обрати предмет';
+    refs.showRegOnCourseListToggleBtnTitle.classList.remove(activeBtnClassName);
+  }
+}
 
 function onTrialLessonsListInput(e) {
   const activeBtnClassName = 'active';
@@ -88,28 +102,6 @@ function toggleShowAnswer(e) {
 
   const questionContainer = e.target.closest('.js-landing-questions-list-question-wrap');
   questionContainer.classList.toggle(targetClassName);
-}
-
-function onConsultationFormInput(e) {
-  const data = {};
-
-  const formData = new FormData(e.currentTarget);
-
-  formData.forEach((value, key) => {
-    data[key] = value;
-  });
-
-  const dataKeys = Object.keys(data);
-  const isValidDataLength = dataKeys.length === 4;
-  const isNotEmptyForm = dataKeys.every((key) => data[key]);
-
-  const isDisabled = !isValidDataLength || !isNotEmptyForm;
-
-  if (isDisabled) {
-    refs.consultationFormSubmitBtn.setAttribute('disabled', '');
-  } else {
-    refs.consultationFormSubmitBtn.removeAttribute('disabled');
-  }
 }
 
 function onRegOnCourseBtnClick(e) {

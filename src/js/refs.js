@@ -1,7 +1,5 @@
 const refs = {
   questionsList: document.querySelector('.js-landing-questions-list'),
-  consultationForm: document.querySelector('.js-landing-consultation-form'),
-  consultationFormSubmitBtn: document.querySelector('.js-landing-consultation-form-submit-btn'),
   trialLessonBtns: document.querySelectorAll('.js-trial-lesson-btn'),
   trialLessonModalWin: document.querySelector('.js-trial-lesson-modal-win'),
   trialLessonModalWinCloseBtn: document.querySelector('.js-trial-lesson-modal-win-close-btn'),
@@ -16,6 +14,7 @@ const refs = {
   successMsgCloseBtn: document.querySelector('.js-landing-success-form-submit-msg-modal-win'),
   successMsg: document.querySelector('.js-landing-success-form-submit-msg-modal-win'),
   showTrialLessonsListToggleBtnTitle: document.querySelector('.js-landing-trial-lesson-form-list-btn-title'),
+  showRegOnCourseListToggleBtnTitle: document.querySelector('.js-landing-reg-on-course-form-list-btn-title'),
 };
 
 export default refs;
