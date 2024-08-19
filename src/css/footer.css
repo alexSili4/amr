@@ -31,6 +31,7 @@
 }
 
 .landing-footer-info-logo-link {
+  align-self: flex-start;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -92,6 +93,22 @@
   line-height: 1.5;
 }
 
+.landing-footer-social-links-list-wrap {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.landing-footer-social-links-list-title {
+  width: 200px;
+  color: #fffcf9;
+  font-family: Montserrat;
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 1.2;
+  text-transform: uppercase;
+}
+
 .landing-footer-social-links-list {
   display: flex;
   gap: 9px;
@@ -125,25 +142,31 @@
     padding-top: 100px;
     padding-bottom: 81px;
   }
+
   .landing-footer-container {
     width: 1152px;
   }
+
   .landing-footer-content {
     gap: 32px;
   }
+
   .landing-footer-info-wrap {
     flex-direction: row;
     justify-content: space-between;
     gap: 0px;
   }
+
   .landing-footer-info-links-wrap {
     flex-direction: row;
     gap: 96px;
   }
+
   .landing-footer-info-logo-link-icon {
     width: 96px;
     height: 83px;
   }
+
   .landing-footer-nav-links-list {
     gap: 8px;
   }
@@ -153,12 +176,14 @@
     font-size: 16px;
     line-height: 1.5;
   }
+
   .landing-footer-address-wrap {
     flex-direction: row;
     justify-content: space-between;
     gap: 0px;
     width: 736px;
   }
+
   .landing-footer-address-links-list {
     gap: 16px;
   }
@@ -166,16 +191,24 @@
   .landing-footer-address-links-list-link {
     gap: 16px;
   }
+
   .landing-footer-address-links-list-link-icon {
     width: 32px;
     height: 32px;
   }
+
   .landing-footer-address-links-list-link-title {
     font-size: 16px;
   }
+
+  .landing-footer-social-links-list-wrap {
+    gap: 32px;
+  }
+
   .landing-footer-social-links-list {
     gap: 16px;
   }
+
   .landing-footer-social-links-list-link-icon {
     width: 56px;
     height: 56px;
