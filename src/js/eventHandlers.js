@@ -19,6 +19,30 @@ refs.landingModalWinBackdrop.forEach((backdrop) => {
 refs.successMsgCloseBtn.addEventListener('click', onSuccessMsgCloseBtnClick);
 refs.trialLessonsList.addEventListener('input', onTrialLessonsListInput);
 refs.regOnCourseList.addEventListener('input', onRegOnCourseListInput);
+refs.coursesList.addEventListener('click', onCoursesListClick);
+refs.aboutLessonCloseBtn.addEventListener('click', onAboutLessonCloseBtnClick);
+refs.aboutLessonRegBtn.addEventListener('click', onAboutLessonCloseBtnClick);
+
+function onAboutLessonCloseBtnClick(e) {
+  e.currentTarget.blur();
+
+  refs.aboutLessonModalWin.classList.add(isHiddenClassName);
+}
+
+function onCoursesListClick(e) {
+  const targetBtn = e.target.closest('.js-landing-courses-about-btn');
+
+  if (!targetBtn) {
+    return;
+  }
+
+  targetBtn.blur();
+  const targetCourseContainer = e.target.closest('.js-landing-courses-course-wrap');
+  const targetCourseName = targetCourseContainer.querySelector('.js-landing-courses-course-text').textContent;
+  refs.aboutLessonModalWinTitle.textContent = targetCourseName;
+  refs.aboutLessonModalWin.classList.remove(isHiddenClassName);
+  window.addEventListener('keydown', hideModalWin);
+}
 
 function onRegOnCourseListInput(e) {
   const activeBtnClassName = 'active';
@@ -49,7 +73,7 @@ function onTrialLessonsListInput(e) {
 }
 
 function onSuccessMsgCloseBtnClick(e) {
-  e.currentTarget.blur(isHiddenClassName);
+  e.currentTarget.blur();
 
   refs.successMsg.classList.add(isHiddenClassName);
 }

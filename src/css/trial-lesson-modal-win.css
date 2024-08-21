@@ -354,3 +354,9 @@ body:has(.landing-backdrop-wrap:not(.is-hidden)) {
   background-color: #fffcf9;
   color: #831ec1;
 }
+
+@media screen and (min-height: 770px) {
+  .landing-backdrop-wrap {
+    overflow: hidden;
+  }
+}

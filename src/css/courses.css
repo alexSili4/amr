@@ -63,6 +63,7 @@
   font-weight: 700;
   line-height: 1.2;
   text-align: center;
+  text-transform: uppercase;
 }
 
 .landing-courses-register-btn {
@@ -126,14 +127,43 @@
   }
 
   .landing-courses-course-wrap {
-    height: 100%;
-    min-height: 140px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 172px;
     padding: 32px;
   }
 
   .landing-courses-course-text {
     font-size: 32px;
     text-align: left;
+  }
+
+  .landing-courses-about-btn {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 0;
+    border: none;
+    background-color: transparent;
+  }
+
+  .landing-courses-about-btn-title {
+    color: rgba(206, 36, 206, 0.8);
+    font-family: Montserrat;
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 1.5;
+  }
+
+  .landing-courses-about-btn-icon {
+    width: 24px;
+    height: 24px;
+    transition: transform var(--transition-duration-and-func);
+  }
+
+  .landing-courses-about-btn:is(:hover, :focus) > .landing-courses-about-btn-icon {
+    transform: translateX(8px);
   }
 
   .landing-courses-register-btn {
@@ -148,5 +178,11 @@
   .landing-courses-register-btn:is(:hover, :focus) {
     background-color: #fffcf9;
     color: #831ec1;
+  }
+}
+
+@media screen and (max-width: 1179px) {
+  .landing-courses-about-btn {
+    display: none;
   }
 }

@@ -14,7 +14,7 @@ mm.add('(min-width: 1180px)', () => {
   const convenientPaymentSystemTl = gsap.timeline();
   const sloganDecorativeLine = gsap.timeline();
   const ourNewProductDecorativeLine = gsap.timeline();
-  const trialLessonBtn = gsap.timeline({ delay: 3.5 });
+  const trialLessonBtn = gsap.timeline({ delay: 1.9 });
 
   modernMethodsTl.fromTo('.js-advantages-img-wrap.modern-methods', { opacity: 0 }, { opacity: 1, duration: 1 }, 0);
   individualApproachTl.fromTo('.js-advantages-img-wrap.individual-approach', { opacity: 0 }, { opacity: 1, duration: 1 }, 0);
@@ -109,7 +109,7 @@ mm.add('(max-width: 1179px)', () => {
   const convenientPaymentSystemTl = gsap.timeline();
   const sloganDecorativeLine = gsap.timeline();
   const ourNewProductDecorativeLine = gsap.timeline();
-  const trialLessonBtn = gsap.timeline({ delay: 3.5 });
+  const trialLessonBtn = gsap.timeline({ delay: 1.9 });
 
   modernMethodsTl.fromTo('.js-advantages-img-wrap.modern-methods', { opacity: 0 }, { opacity: 1, duration: 1 }, 0);
   individualApproachTl.fromTo('.js-advantages-img-wrap.individual-approach', { opacity: 0 }, { opacity: 1, duration: 1 }, 0);

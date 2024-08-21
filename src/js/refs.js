@@ -15,6 +15,11 @@ const refs = {
   successMsg: document.querySelector('.js-landing-success-form-submit-msg-modal-win'),
   showTrialLessonsListToggleBtnTitle: document.querySelector('.js-landing-trial-lesson-form-list-btn-title'),
   showRegOnCourseListToggleBtnTitle: document.querySelector('.js-landing-reg-on-course-form-list-btn-title'),
+  coursesList: document.querySelector('.js-landing-courses-list'),
+  aboutLessonModalWin: document.querySelector('.js-about-lesson-modal-win'),
+  aboutLessonModalWinTitle: document.querySelector('.js-landing-about-lesson-modal-win-title'),
+  aboutLessonCloseBtn: document.querySelector('.js-about-lesson-modal-win-close-btn'),
+  aboutLessonRegBtn: document.querySelector('.js-landing-about-lesson-modal-win-reg-btn'),
 };
 
 export default refs;
