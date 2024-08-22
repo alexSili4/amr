@@ -33,7 +33,6 @@ const reviewsSlider = new Swiper('.js-reviews-slider', {
     clickable: true,
     renderBullet: (index, className) => `<div class="landing-reviews-slider-pagination-item ${className}"></div>`,
   },
-
   navigation: {
     nextEl: '.js-landing-reviews-slider-btn-next',
     prevEl: '.js-landing-reviews-slider-btn-prev',
