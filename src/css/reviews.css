@@ -58,6 +58,7 @@
 }
 
 .landing-reviews-slider-slide-review-img-wrap {
+  position: relative;
   width: 85px;
   height: 85px;
   border-radius: 6px;
@@ -196,6 +197,29 @@
     width: 265px;
     height: 265px;
     border-radius: 20px;
+  }
+
+  .landing-reviews-slider-slide-review-video-control-btn {
+    position: absolute;
+    top: 16px;
+    left: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
+    border: none;
+    background-color: transparent;
+  }
+
+  .landing-reviews-slider-slide-review-video-control-btn-icon {
+    width: 26px;
+    height: 31px;
+    fill: var(--white-color);
+    transition: fill var(--transition-duration-and-func);
+  }
+
+  .landing-reviews-slider-slide-review-video-control-btn:is(:hover, :focus) .landing-reviews-slider-slide-review-video-control-btn-icon {
+    fill: #831ec1;
   }
 
   .landing-reviews-slider-slide-review-name {

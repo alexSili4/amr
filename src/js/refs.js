@@ -20,6 +20,7 @@ const refs = {
   aboutLessonModalWinTitle: document.querySelector('.js-landing-about-lesson-modal-win-title'),
   aboutLessonCloseBtn: document.querySelector('.js-about-lesson-modal-win-close-btn'),
   aboutLessonRegBtn: document.querySelector('.js-landing-about-lesson-modal-win-reg-btn'),
+  reviewsList: document.querySelector('.js-landing-reviews-list'),
 };
 
 export default refs;

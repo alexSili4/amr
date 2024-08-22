@@ -3,7 +3,9 @@ import { Navigation, Pagination, EffectCoverflow } from 'swiper/modules';
 import 'swiper/css';
 import 'swiper/css/pagination';
 
-const reviewsSlider = new Swiper('.js-reviews-slider', {
+const reviewsSliderClassName = '.js-reviews-slider';
+
+const reviewsSlider = new Swiper(reviewsSliderClassName, {
   modules: [Navigation, Pagination, EffectCoverflow],
   autoHeight: true,
   direction: 'horizontal',
@@ -36,5 +38,16 @@ const reviewsSlider = new Swiper('.js-reviews-slider', {
   navigation: {
     nextEl: '.js-landing-reviews-slider-btn-next',
     prevEl: '.js-landing-reviews-slider-btn-prev',
+  },
+  on: {
+    slideChange: function () {
+      const slider = document.querySelector(reviewsSliderClassName);
+      const videos = slider.querySelectorAll('video');
+
+      videos.forEach((video) => {
+        video.pause();
+        video.classList.remove('is-play');
+      });
+    },
   },
 });

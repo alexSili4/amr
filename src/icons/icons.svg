@@ -76,5 +76,8 @@
 <path fill="none" stroke="#7a7a7a" style="stroke: var(--color1, #7a7a7a)" stroke-linejoin="miter" stroke-linecap="butt" stroke-miterlimit="4" stroke-width="3.2" d="M1.131 14.868l15.839 15.839"></path>
 <path fill="none" stroke="#7a7a7a" style="stroke: var(--color1, #7a7a7a)" stroke-linejoin="miter" stroke-linecap="butt" stroke-miterlimit="4" stroke-width="3.2" d="M30.544 14.868l-13.576 13.576"></path>
 </symbol>
+<symbol id="play" viewBox="0 0 27 32">
+<path d="M5.102 0.504c-1.034-0.65-2.334-0.671-3.39-0.064s-1.712 1.75-1.712 2.992v25.138c0 1.243 0.657 2.385 1.712 2.992s2.355 0.578 3.39-0.064l20.129-12.569c0.999-0.621 1.608-1.728 1.608-2.928s-0.608-2.3-1.608-2.928l-20.129-12.569z"></path>
+</symbol>
 </defs>
 </svg>
