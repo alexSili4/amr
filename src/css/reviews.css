@@ -206,20 +206,38 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    width: 26px;
+    height: 31px;
     padding: 0;
     border: none;
     background-color: transparent;
   }
 
   .landing-reviews-slider-slide-review-video-control-btn-icon {
-    width: 26px;
-    height: 31px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 100%;
+    height: 100%;
     fill: var(--white-color);
-    transition: fill var(--transition-duration-and-func);
+    transform: translateX(-50%) translateY(-50%);
+    transition: fill var(--transition-duration-and-func), opacity var(--transition-duration-and-func);
+  }
+
+  .landing-reviews-slider-slide-review-video-control-btn-icon.pause {
+    opacity: 0;
   }
 
   .landing-reviews-slider-slide-review-video-control-btn:is(:hover, :focus) .landing-reviews-slider-slide-review-video-control-btn-icon {
     fill: #831ec1;
+  }
+
+  .landing-reviews-slider-slide-review-img-wrap:has(video.is-play) .landing-reviews-slider-slide-review-video-control-btn-icon.play {
+    opacity: 0;
+  }
+
+  .landing-reviews-slider-slide-review-img-wrap:has(video.is-play) .landing-reviews-slider-slide-review-video-control-btn-icon.pause {
+    opacity: 1;
   }
 
   .landing-reviews-slider-slide-review-name {

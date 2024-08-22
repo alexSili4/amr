@@ -3,26 +3,26 @@ import refs from './refs';
 const isHiddenClassName = 'is-hidden';
 const isPlayClassName = 'is-play';
 
-// refs.questionsList.addEventListener('click', toggleShowAnswer);
+refs.questionsList.addEventListener('click', toggleShowAnswer);
 refs.trialLessonBtns.forEach((btn) => {
   btn.addEventListener('click', onTrialLessonBtnClick);
 });
-// refs.trialLessonModalWinCloseBtn.addEventListener('click', onTrialLessonModalWinCloseBtnClick);
-// refs.showTrialLessonsListToggleBtn.addEventListener('click', onShowTrialLessonsListToggleBtnClick);
+refs.trialLessonModalWinCloseBtn.addEventListener('click', onTrialLessonModalWinCloseBtnClick);
+refs.showTrialLessonsListToggleBtn.addEventListener('click', onShowTrialLessonsListToggleBtnClick);
 refs.regOnCourseBtns.forEach((btn) => {
   btn.addEventListener('click', onRegOnCourseBtnClick);
 });
-// refs.regOnCourseModalWinCloseBtn.addEventListener('click', onRegOnCourseModalWinCloseBtnClick);
-// refs.showRegOnCourseListToggleBtn.addEventListener('click', onShowRegOnCourseListToggleBtnClick);
+refs.regOnCourseModalWinCloseBtn.addEventListener('click', onRegOnCourseModalWinCloseBtnClick);
+refs.showRegOnCourseListToggleBtn.addEventListener('click', onShowRegOnCourseListToggleBtnClick);
 refs.landingModalWinBackdrop.forEach((backdrop) => {
   backdrop.addEventListener('click', onBackdropClick);
 });
-// refs.successMsgCloseBtn.addEventListener('click', onSuccessMsgCloseBtnClick);
-// refs.trialLessonsList.addEventListener('input', onTrialLessonsListInput);
-// refs.regOnCourseList.addEventListener('input', onRegOnCourseListInput);
-// refs.coursesList.addEventListener('click', onCoursesListClick);
-// refs.aboutLessonCloseBtn.addEventListener('click', onAboutLessonCloseBtnClick);
-// refs.aboutLessonRegBtn.addEventListener('click', onAboutLessonCloseBtnClick);
+refs.successMsgCloseBtn.addEventListener('click', onSuccessMsgCloseBtnClick);
+refs.trialLessonsList.addEventListener('input', onTrialLessonsListInput);
+refs.regOnCourseList.addEventListener('input', onRegOnCourseListInput);
+refs.coursesList.addEventListener('click', onCoursesListClick);
+refs.aboutLessonCloseBtn.addEventListener('click', onAboutLessonCloseBtnClick);
+refs.aboutLessonRegBtn.addEventListener('click', onAboutLessonCloseBtnClick);
 refs.reviewsList.addEventListener('click', onReviewsListClick);
 
 function onReviewsListClick(e) {
