@@ -24,6 +24,89 @@
   color: #ce24ce;
 }
 
+.landing-experienced-teachers-cards-wrap {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin-top: 32px;
+}
+
+.landing-experienced-teachers-cards {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.landing-experienced-teachers-card-slider-wrap {
+  position: relative;
+  align-self: flex-start;
+}
+
+.landing-experienced-teachers-card-slider-clip-icon {
+  position: absolute;
+  top: -16px;
+  left: -2px;
+  display: block;
+  width: 28px;
+  height: 41px;
+}
+
+.landing-experienced-teachers-card-slider-container {
+  padding: 16px;
+  border-radius: 10px;
+  background-color: #ce24ce;
+}
+
+.landing-experienced-teachers-cards-experience-wrap {
+  display: flex;
+  flex-direction: row-reverse;
+  align-items: flex-end;
+  gap: 8px;
+}
+
+.landing-experienced-teachers-experience-wrap {
+  position: relative;
+}
+
+.landing-experienced-teachers-experience-icon {
+  position: absolute;
+  top: -15px;
+  left: 0;
+  display: block;
+  width: 26px;
+  height: 26px;
+}
+
+.landing-experienced-teachers-experience {
+  padding: 16px;
+  border-radius: 10px;
+  background-color: #ce24ce;
+}
+
+.landing-experienced-teachers-experience-text {
+  color: var(--white-color);
+  font-family: Montserrat;
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 1.5;
+}
+
+.landing-experienced-teachers-experience-woman-img {
+  width: 160px;
+  height: 191px;
+  border-radius: 5px;
+}
+
+.landing-experienced-teachers-experience-students-img {
+  width: 187px;
+  height: 119px;
+  border-radius: 8px;
+}
+
+.landing-experienced-teachers-experience-teacher-img {
+  border-radius: 8px;
+}
+
 @media screen and (min-width: 1180px) {
   .landing-experienced-teachers-wrap {
     padding-top: 128px;
@@ -37,5 +120,84 @@
   .landing-experienced-teachers-title {
     font-size: 56px;
     line-height: 1.2;
+  }
+
+  .landing-experienced-teachers-cards-wrap {
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 0px;
+    margin-top: 64px;
+  }
+
+  .landing-experienced-teachers-cards {
+    flex-direction: row;
+    align-self: flex-start;
+    gap: 32px;
+  }
+
+  .landing-experienced-teachers-card-slider-clip-icon {
+    top: -29px;
+    left: -8px;
+    width: 40px;
+    height: 59px;
+  }
+
+  .landing-experienced-teachers-card-slider-container {
+    padding: 25px 31px;
+  }
+
+  .landing-experienced-teachers-experience-woman-img {
+    width: 352px;
+    height: 415px;
+    border-radius: 10px;
+  }
+
+  .landing-experienced-teachers-experience-wrap.mobile {
+    display: none;
+  }
+
+  .landing-experienced-teachers-cards.gallery {
+    flex-direction: column;
+    padding-top: 43px;
+  }
+
+  .landing-experienced-teachers-cards-gallery {
+    display: flex;
+    align-items: flex-end;
+    gap: 32px;
+  }
+
+  .landing-experienced-teachers-experience-icon {
+    top: -25px;
+    left: auto;
+    right: -11px;
+    width: 49px;
+    height: 49px;
+  }
+
+  .landing-experienced-teachers-experience {
+    padding: 30px;
+  }
+
+  .landing-experienced-teachers-experience-text {
+    font-size: 20px;
+  }
+
+  .landing-experienced-teachers-experience-students-img {
+    width: 256px;
+    height: 163px;
+    border-radius: 10px;
+  }
+
+  .landing-experienced-teachers-experience-teacher-img {
+    width: 352px;
+    height: 238px;
+    border-radius: 10px;
+  }
+}
+
+@media screen and (max-width: 1179px) {
+  .landing-experienced-teachers-experience-wrap.desk {
+    display: none;
   }
 }
