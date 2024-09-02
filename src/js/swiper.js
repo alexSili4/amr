@@ -1,5 +1,5 @@
 import Swiper from 'swiper';
-import { Navigation, Pagination, EffectCoverflow } from 'swiper/modules';
+import { Navigation, Pagination, EffectCoverflow, Autoplay } from 'swiper/modules';
 import 'swiper/css';
 import 'swiper/css/pagination';
 
@@ -49,5 +49,18 @@ const reviewsSlider = new Swiper(reviewsSliderClassName, {
         video.classList.remove('is-play');
       });
     },
+  },
+});
+
+const experiencedTeachersCardSlider = new Swiper('.js-experienced-teachers-card-slider', {
+  modules: [Autoplay],
+  autoHeight: true,
+  spaceBetween: 30,
+  speed: 1000,
+  allowTouchMove: false,
+  autoplay: {
+    delay: 5000,
+    pauseOnMouseEnter: false,
+    waitForTransition: false,
   },
 });
