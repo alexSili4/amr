@@ -3,7 +3,7 @@
 /* @import url('./fonts.css'); */
 /* @import url('./utilities.css'); */
 /* @import url('./variables.css'); */
-/* @import url('./header.css'); */
+@import url('./header.css');
 /* @import url('./hero.css'); */
 /* @import url('./slogan.css'); */
 /* @import url('./decorative-video.css'); */
@@ -12,7 +12,7 @@
 /* @import url('./our-new-product.css'); */
 /* @import url('./first-lesson.css'); */
 /* @import url('./lessons-formats.css'); */
-@import url('./experienced-teachers.css');
+/* @import url('./experienced-teachers.css'); */
 /* @import url('./reviews.css'); */
 /* @import url('./instagram.css'); */
 /* @import url('./questions.css'); */
