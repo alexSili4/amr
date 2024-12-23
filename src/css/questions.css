@@ -2,6 +2,7 @@
   padding-top: 64px;
   padding-bottom: 64px;
   border-radius: 16px;
+  background-color: var(--white-color);
   background-image: linear-gradient(0deg, rgba(206, 36, 206, 0.41), rgba(206, 36, 206, 0.41) 23.679%, rgba(131, 30, 193, 0) 90%);
 }
 

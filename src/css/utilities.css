@@ -20,7 +20,8 @@ img {
   max-width: 100%;
 }
 
-button {
+button,
+input[type='submit'] {
   cursor: pointer;
 }
 
