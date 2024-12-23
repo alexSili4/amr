@@ -68,6 +68,12 @@
   overflow: hidden;
 }
 
+@media screen and (max-width: 1179px) {
+  .landing-hero-reg-btn {
+    width: 100%;
+  }
+}
+
 @media screen and (min-width: 1180px) {
   .landing-hero-wrap {
     padding-top: 301px;

@@ -42,6 +42,12 @@
   line-height: 1.5%;
 }
 
+@media screen and (max-width: 1179px) {
+  .landing-first-lesson-register-btn {
+    width: 100%;
+  }
+}
+
 @media screen and (min-width: 1180px) {
   .landing-first-lesson-wrap {
     padding-top: 185px;

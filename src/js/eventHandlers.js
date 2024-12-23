@@ -4,22 +4,21 @@ const isHiddenClassName = 'is-hidden';
 const isPlayClassName = 'is-play';
 
 refs.questionsList.addEventListener('click', toggleShowAnswer);
-refs.trialLessonBtns?.forEach((btn) => {
+refs.trialLessonBtns.forEach((btn) => {
   btn.addEventListener('click', onTrialLessonBtnClick);
 });
 refs.trialLessonModalWinCloseBtn.addEventListener('click', onTrialLessonModalWinCloseBtnClick);
-refs.showTrialLessonsListToggleBtn.addEventListener('click', onShowTrialLessonsListToggleBtnClick);
+refs.showTrialLessonsListToggleBtn.forEach((btn) => {
+  btn.addEventListener('click', onShowTrialLessonsListToggleBtnClick);
+});
 refs.regOnCourseBtns.forEach((btn) => {
   btn.addEventListener('click', onRegOnCourseBtnClick);
 });
 refs.regOnCourseModalWinCloseBtn.addEventListener('click', onRegOnCourseModalWinCloseBtnClick);
-refs.showRegOnCourseListToggleBtn.addEventListener('click', onShowRegOnCourseListToggleBtnClick);
 refs.landingModalWinBackdrop.forEach((backdrop) => {
   backdrop.addEventListener('click', onBackdropClick);
 });
-refs.successMsgCloseBtn.addEventListener('click', onSuccessMsgCloseBtnClick);
 refs.trialLessonsList.addEventListener('input', onTrialLessonsListInput);
-refs.regOnCourseList.addEventListener('input', onRegOnCourseListInput);
 refs.coursesList.addEventListener('click', onCoursesListClick);
 refs.aboutLessonCloseBtn.addEventListener('click', onAboutLessonCloseBtnClick);
 refs.aboutLessonRegBtn.addEventListener('click', onAboutLessonCloseBtnClick);
@@ -67,23 +66,9 @@ function onCoursesListClick(e) {
   window.addEventListener('keydown', hideModalWin);
 }
 
-function onRegOnCourseListInput(e) {
-  const activeBtnClassName = 'active';
-  const activeCourses = refs.regOnCourseList.querySelectorAll('label:has(input[type="checkbox"]:checked)');
-  const btnTitle = [...activeCourses].map((item) => item.lastElementChild.textContent).join(', ');
-
-  if (btnTitle) {
-    refs.showRegOnCourseListToggleBtnTitle.textContent = btnTitle;
-    refs.showRegOnCourseListToggleBtnTitle.classList.add(activeBtnClassName);
-  } else {
-    refs.showRegOnCourseListToggleBtnTitle.textContent = 'Обрати предмет';
-    refs.showRegOnCourseListToggleBtnTitle.classList.remove(activeBtnClassName);
-  }
-}
-
 function onTrialLessonsListInput(e) {
   const activeBtnClassName = 'active';
-  const activeCourses = refs.trialLessonsList.querySelectorAll('label:has(input[type="checkbox"]:checked)');
+  const activeCourses = refs.trialLessonsList.querySelectorAll('span:has(input[type="checkbox"]:checked)');
   const btnTitle = [...activeCourses].map((item) => item.lastElementChild.textContent).join(', ');
 
   if (btnTitle) {
@@ -93,12 +78,6 @@ function onTrialLessonsListInput(e) {
     refs.showTrialLessonsListToggleBtnTitle.textContent = 'Обрати предмет';
     refs.showTrialLessonsListToggleBtnTitle.classList.remove(activeBtnClassName);
   }
-}
-
-function onSuccessMsgCloseBtnClick(e) {
-  e.currentTarget.blur();
-
-  refs.successMsg.classList.add(isHiddenClassName);
 }
 
 function onBackdropClick(e) {
@@ -122,7 +101,7 @@ function hideModalWin(e) {
 function onShowTrialLessonsListToggleBtnClick(e) {
   e.currentTarget.blur();
 
-  refs.trialLessonsList.classList.toggle(isHiddenClassName);
+  e.currentTarget.closest('.landing-trial-lesson-form-list-btn-wrap').querySelector('.js-trial-lessons-list').classList.toggle(isHiddenClassName);
 }
 
 function onTrialLessonModalWinCloseBtnClick(e) {
@@ -163,10 +142,4 @@ function onRegOnCourseModalWinCloseBtnClick(e) {
   e.currentTarget.blur();
 
   refs.regOnCourseModalWin.classList.add(isHiddenClassName);
-}
-
-function onShowRegOnCourseListToggleBtnClick(e) {
-  e.currentTarget.blur();
-
-  refs.regOnCourseList.classList.toggle(isHiddenClassName);
 }

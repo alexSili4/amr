@@ -1,3 +1,7 @@
+body {
+  background-color: var(--white-color);
+}
+
 h1,
 h2,
 h3,

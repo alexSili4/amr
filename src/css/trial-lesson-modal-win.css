@@ -68,6 +68,10 @@ body:has(.landing-backdrop-wrap:not(.is-hidden)) {
   padding-bottom: 92px;
 }
 
+.landing-trial-lesson-modal-win-container > .wpcf7 {
+  margin-top: 32px;
+}
+
 .landing-trial-lesson-modal-win-title {
   color: #0d1321;
   font-family: Montserrat;
@@ -251,7 +255,7 @@ body:has(.landing-backdrop-wrap:not(.is-hidden)) {
   border-color: rgba(211, 0, 38, 0.64);
 }
 
-.landing-trial-lesson-form .landing-trial-lesson-form-input-wrap:has(.landing-trial-lesson-form-input.wpcf7-not-valid) .wpcf7-not-valid-tip {
+.landing-trial-lesson-form-input-wrap:has(.landing-trial-lesson-form-input.wpcf7-not-valid) .wpcf7-not-valid-tip {
   opacity: 1;
 }
 
@@ -366,5 +370,24 @@ body:has(.landing-backdrop-wrap:not(.is-hidden)) {
 @media screen and (min-height: 770px) {
   .landing-backdrop-wrap {
     overflow: hidden;
+  }
+}
+
+@media screen and (max-width: 1179px) {
+  .landing-trial-lesson-form-submit-btn-wrap {
+    width: 100%;
+  }
+
+  .landing-trial-lesson-form-submit-btn-wrap > p {
+    width: 100%;
+  }
+
+  .landing-trial-lesson-form-submit-btn-wrap > p > .wpcf7-form-control {
+    width: 100%;
+  }
+
+  .landing-trial-lesson-form-radiobtn-container {
+    flex-direction: column;
+    align-items: flex-start;
   }
 }
