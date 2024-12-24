@@ -18,6 +18,9 @@ const refs = {
   aboutLessonCloseBtn: document.querySelector('.js-about-lesson-modal-win-close-btn'),
   aboutLessonRegBtn: document.querySelector('.js-landing-about-lesson-modal-win-reg-btn'),
   reviewsList: document.querySelector('.js-landing-reviews-list'),
+  mobileMenuBtn: document.querySelector('.js-header-landing-hamburger-btn'),
+  mobileMenu: document.querySelector('.js-header-landing-mobile-menu'),
+  mobileMenuCloseBtn: document.querySelector('.js-header-landing-close-mobile-menu'),
 };
 
 export default refs;

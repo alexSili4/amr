@@ -23,6 +23,8 @@ refs.coursesList.addEventListener('click', onCoursesListClick);
 refs.aboutLessonCloseBtn.addEventListener('click', onAboutLessonCloseBtnClick);
 refs.aboutLessonRegBtn.addEventListener('click', onAboutLessonCloseBtnClick);
 refs.reviewsList.addEventListener('click', onReviewsListClick);
+refs.mobileMenuBtn.addEventListener('click', onMobileMenuBtnClick);
+refs.mobileMenuCloseBtn.addEventListener('click', onMobileMenuCloseBtnClick);
 
 function onReviewsListClick(e) {
   const targetBtn = e.target.closest('.js-landing-reviews-slider-slide-review-video-control-btn');
@@ -142,4 +144,16 @@ function onRegOnCourseModalWinCloseBtnClick(e) {
   e.currentTarget.blur();
 
   refs.regOnCourseModalWin.classList.add(isHiddenClassName);
+}
+
+function onMobileMenuBtnClick(e) {
+  e.currentTarget.blur();
+
+  refs.mobileMenu.classList.remove(isHiddenClassName);
+}
+
+function onMobileMenuCloseBtnClick(e) {
+  e.currentTarget.blur();
+
+  refs.mobileMenu.classList.add(isHiddenClassName);
 }

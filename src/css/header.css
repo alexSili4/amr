@@ -1,3 +1,7 @@
+body:has(.header-landing-mobile-menu:not(.is-hidden)) {
+  overflow: hidden;
+}
+
 .header-landing-wrap {
   position: absolute;
   top: 0;
@@ -93,12 +97,12 @@
   width: 100vw;
   min-height: 100vh;
   background-color: #0d1321;
-  transform: translateX(-100%);
-  transition: transform var(--transition-duration-and-func);
+  transform: translateX(0%);
+  transition: transform var(--transition-duration-and-func), opacity var(--transition-duration-and-func), visibility var(--transition-duration-and-func);
 }
 
-.header-landing-mobile-menu.openNav {
-  transform: translate(0%);
+.header-landing-mobile-menu.is-hidden {
+  transform: translateX(-100%);
 }
 
 .header-landing-mobile-menu-content {
